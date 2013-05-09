@@ -12,13 +12,13 @@
 
 @font-face {
   font-family: "Miao Unicode";
-  /* ideal location to save duplicate; rejected by Firefox as cross reference src: url('https://github.com/phjamr/MiaoUnicode/blob/master/MiaoUnicode-Regular.ttf?raw=true')  format('truetype'); */
+  /*  src: url('https://github.com/phjamr/MiaoUnicode/blob/master/MiaoUnicode-Regular.ttf?raw=true')  format('truetype'); */
   src: url('fonts/MiaoUnicode-Regular.ttf')  format('truetype');
 }
 
 @font-face {
   font-family: "Mro Unicode";
-  /* src: url('https://github.com/phjamr/MroUnicode/blob/master/MroUnicode-Regular.ttf?raw=true')  format('truetype'); */
+  /* ideal location to save duplicate; rejected by Firefox as cross reference src: url('https://github.com/phjamr/MroUnicode/blob/master/MroUnicode-Regular.ttf?raw=true')  format('truetype'); */
   src: url('fonts/MroUnicode-Regular.ttf')  format('truetype');
 }
 
