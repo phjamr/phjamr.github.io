@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" xml:lang="en">
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Miao Graphite Test for Firefox</title>
+  <meta http-equiv="content-language" content="en">
+<!--  <link rel="stylesheet" type="text/css" href="web.css" /> -->
+ <style>
+  @font-face {
+	font-family: 'Miao Unicode';
+        /*  src: url('https://github.com/phjamr/MiaoUnicode/blob/master/MiaoUnicode-Regular.ttf?raw=true')  format('truetype'); */
+	src: url('assets/css/fonts/MiaoUnicode-Regular.ttf');  format('truetype')
+	}
+  body {
+       font-family: 'Miao Unicode', sans-serif;
+       font-size: 24px;
+       font-weight: normal;
+       -moz-font-feature-settings: "onum";
+  }
+  h1 {
+       font-family: 'Miao Unicode', sans-serif;
+       font-size: 24px;
+       font-weight: normal;
+       -moz-font-feature-settings: "smcp";
+  }
+  h2 {
+       font-family: 'Miao Unicode', sans-serif;
+       font-size: 18px;
+       font-weight: normal;
+       -moz-font-feature-settings: "smcp";
+  }
+  h3 {
+       font-family: 'Miao Unicode', sans-serif;
+       font-size: 18px;
+       font-weight: normal;
+       color: gray;
+  }
+ </style>
+</head>
+
+<body>
+<h1>Miao Graphite Test</h1>
+<h2>Glyphs</h2>
+<h3>Initials (consonants):</h3>
+<p>𖼀 𖼁 𖼂 𖼃 𖼄 𖼅 𖼆 𖼇 𖼈 𖼉 𖼊 𖼋 𖼌 𖼍 𖼎 𖼏 𖼐 𖼑 𖼒 𖼓 𖼔 𖼕 𖼖 𖼗 𖼘 𖼙 𖼚 𖼛 𖼜 𖼝 𖼞 𖼟 𖼠 𖼡 𖼢 𖼣 𖼤 𖼥 𖼦 𖼧 𖼨 𖼩 𖼪 𖼫 𖼬 𖼭 𖼮 𖼯 𖼰 𖼱 𖼲 𖼳 𖼴 𖼵 𖼶 𖼷 𖼸 𖼹 𖼺 𖼻 𖼼 𖼽 𖼾 𖼿 𖽀 𖽁 𖽂 𖽃 𖽄</p>
+<h3>Modifiers (nasalization, aspiration, voicing):</h3>
+<p>𖽐 𖽑 𖽒 𖽓</p>
+<h3>Finals (vowels and nasals):</h3>
+<p>𖽔 𖽕 𖽖 𖽗 𖽘 𖽙 𖽚 𖽛 𖽜 𖽝 𖽞 𖽟 𖽠 𖽡 𖽢 𖽣 𖽤 𖽥 𖽦 𖽧 𖽨 𖽩 𖽪 𖽫 𖽬 𖽭 𖽮 𖽯 𖽰 𖽱 𖽲 𖽳 𖽴 𖽵 𖽶 𖽷 𖽸 𖽹 𖽺 𖽻 𖽼 𖽽 𖽾</p>
+<h3>Tones:</h3>
+<p>𖾏 𖾐 𖾑 𖾒 𖾓 𖾔 𖾕 𖾖 𖾗 𖾘 𖾙 𖾚 𖾛 𖾜 𖾝 𖾞 𖾟</p>
+<h2>Test:</h2>
+<h3>Tone positions:</h3>
+<p>𖼁𖽮𖽴 𖼁𖽮𖾏 𖼁𖽮𖾐 𖼁𖽮𖽴𖾐 𖼁𖽮𖾑 𖼁𖽮𖽴𖾑 𖼁𖽮𖾒 𖼁𖽮𖽴𖾒   𖼤𖽮𖽴 𖼤𖽮𖾏 𖼤𖽮𖾐 𖼤𖽮𖽴𖾐 𖼤𖽮𖾑 𖼤𖽮𖽴𖾑 𖼤𖽮𖾒 𖼤𖽮𖽴𖾒 𖼐𖽮𖽴 𖼐𖽮𖾏 𖼐𖽮𖾐 𖼐𖽮𖽴𖾐 𖼐𖽮𖾑 𖼐𖽮𖽴𖾑 𖼐𖽮𖾒 𖼐𖽮𖽴𖾒 𖼛𖽙𖾐</p>
+<h3>Ordering with nasal marker & aspiration:</h3>
+<p>𖼻𖽑𖽣𖽤𖾑 𖼻𖽑𖽨𖽲𖾑 𖼻𖽡𖽨𖾑 𖼻𖽠𖽲𖾑 𖼻𖽪𖽩𖾑 𖼻𖽡𖽪𖾑 𖼻𖽡𖽟𖾑 𖼻𖽤𖽝𖾑 𖼻𖽛𖽫𖾑 𖼻𖽚𖽛𖾑 𖼌𖽑𖽣𖽥𖾐</p>
+<p>𖼈𖽐𖽑𖽼𖾑 𖼢𖽐𖽰𖾑 𖼼𖽐𖽳𖾑 𖽁𖽐𖽑𖽦𖾑 𖼴𖽑𖽐𖽠𖽳𖾑 𖼼𖽑𖽐 𖽀𖽑𖽐𖽛𖾑 𖽁𖽐𖽑𖽛𖾑 𖽀𖽐𖽑𖽜𖾑 𖼼𖽐𖽓𖽲𖾑</p>
+<h3>Aspiration high kerning:</h3>
+<p>𖼀𖽑 𖼁𖽑 𖼂𖽑 𖼃𖽑 𖼄𖽑 𖼅𖽑 𖼆𖽑 𖼇𖽑 𖼈𖽑 𖼉𖽑 𖼊𖽑 𖼋𖽑 𖼌𖽑 𖼍𖽑 𖼎𖽑 𖼏𖽑 𖼐𖽑 𖼑𖽑 𖼒𖽑 𖼓𖽑 𖼔𖽑 𖼕𖽑 𖼖𖽑 𖼗𖽑 𖼘𖽑 𖼙𖽑 𖼚𖽑 𖼛𖽑 𖼜𖽑 𖼝𖽑 𖼞𖽑 𖼟𖽑 𖼠𖽑 𖼡𖽑 𖼢𖽑 𖼣𖽑 𖼤𖽑 𖼥𖽑 𖼦𖽑 𖼧𖽑 𖼨𖽑 𖼩𖽑 𖼪𖽑 𖼫𖽑 𖼬𖽑 𖼭𖽑 𖼮𖽑 𖼯𖽑 𖼰𖽑 𖼱𖽑 𖼲𖽑 𖼳𖽑 𖼴𖽑 𖼵𖽑 𖼶𖽑 𖼷𖽑 𖼸𖽑 𖼹𖽑 𖼺𖽑 𖼻𖽑 𖼼𖽑 𖼽𖽑 𖼾𖽑 𖼿𖽑 𖽀𖽑 𖽁𖽑 𖽂𖽑 𖽃𖽑 𖽄𖽑</p>
+<h3>Aspiration low kerning:</h3>
+<p>𖼀𖽓 𖼁𖽓 𖼂𖽓 𖼃𖽓 𖼄𖽓 𖼅𖽓 𖼆𖽓 𖼇𖽓 𖼈𖽓 𖼉𖽓 𖼊𖽓 𖼋𖽓 𖼌𖽓 𖼍𖽓 𖼎𖽓 𖼏𖽓 𖼐𖽓 𖼑𖽓 𖼒𖽓 𖼓𖽓 𖼔𖽓 𖼕𖽓 𖼖𖽓 𖼗𖽓 𖼘𖽓 𖼙𖽓 𖼚𖽓 𖼛𖽓 𖼜𖽓 𖼝𖽓 𖼞𖽓 𖼟𖽓 𖼠𖽓 𖼡𖽓 𖼢𖽓 𖼣𖽓 𖼤𖽓 𖼥𖽓 𖼦𖽓 𖼧𖽓 𖼨𖽓 𖼩𖽓 𖼪𖽓 𖼫𖽓 𖼬𖽓 𖼭𖽓 𖼮𖽓 𖼯𖽓 𖼰𖽓 𖼱𖽓 𖼲𖽓 𖼳𖽓 𖼴𖽓 𖼵𖽓 𖼶𖽓 𖼷𖽓 𖼸𖽓 𖼹𖽓 𖼺𖽓 𖼻𖽓 𖼼𖽓 𖼽𖽓 𖼾𖽓 𖼿𖽓 𖽀𖽓 𖽁𖽓 𖽂𖽓 𖽃𖽓 𖽄𖽓</p>
+<h3>Final baseline kerning:</h3>
+<p>𖼀𖽙 𖼁𖽙 𖼂𖽙 𖼃𖽙 𖼄𖽙 𖼅𖽙 𖼆𖽙 𖼇𖽙 𖼈𖽙 𖼉𖽙 𖼊𖽙 𖼋𖽙 𖼌𖽙 𖼍𖽙 𖼎𖽙 𖼏𖽙 𖼐𖽙 𖼑𖽙 𖼒𖽙 𖼓𖽙 𖼔𖽙 𖼕𖽙 𖼖𖽙 𖼗𖽙 𖼘𖽙 𖼙𖽙 𖼚𖽙 𖼛𖽙 𖼜𖽙 𖼝𖽙 𖼞𖽙 𖼟𖽙 𖼠𖽙 𖼡𖽙 𖼢𖽙 𖼣𖽙 𖼤𖽙 𖼥𖽙 𖼦𖽙 𖼧𖽙 𖼨𖽙 𖼩𖽙 𖼪𖽙 𖼫𖽙 𖼬𖽙 𖼭𖽙 𖼮𖽙 𖼯𖽙 𖼰𖽙 𖼱𖽙 𖼲𖽙 𖼳𖽙 𖼴𖽙 𖼵𖽙 𖼶𖽙 𖼷𖽙 𖼸𖽙 𖼹𖽙 𖼺𖽙 𖼻𖽙 𖼼𖽙 𖼽𖽙 𖼾𖽙 𖼿𖽙 𖽀𖽙 𖽁𖽙 𖽂𖽙 𖽃𖽙 𖽄𖽙</p>
+<h3>Final topright kerning:</h3>
+<p>𖼀𖽙𖾐 𖼁𖽙𖾐 𖼂𖽙𖾐 𖼃𖽙𖾐 𖼄𖽙𖾐 𖼅𖽙𖾐 𖼆𖽙𖾐 𖼇𖽙𖾐 𖼈𖽙𖾐 𖼉𖽙𖾐 𖼊𖽙𖾐 𖼋𖽙𖾐 𖼌𖽙𖾐 𖼍𖽙𖾐 𖼎𖽙𖾐 𖼏𖽙𖾐 𖼐𖽙𖾐 𖼑𖽙𖾐 𖼒𖽙𖾐 𖼓𖽙𖾐 𖼔𖽙𖾐 𖼕𖽙𖾐 𖼖𖽙𖾐 𖼗𖽙𖾐 𖼘𖽙𖾐 𖼙𖽙𖾐 𖼚𖽙𖾐 𖼛𖽙𖾐 𖼜𖽙𖾐 𖼝𖽙𖾐 𖼞𖽙𖾐 𖼟𖽙𖾐 𖼠𖽙𖾐 𖼡𖽙𖾐 𖼢𖽙𖾐 𖼣𖽙𖾐 𖼤𖽙𖾐 𖼥𖽙𖾐 𖼦𖽙𖾐 𖼧𖽙𖾐 𖼨𖽙𖾐 𖼩𖽙𖾐 𖼪𖽙𖾐 𖼫𖽙𖾐 𖼬𖽙𖾐 𖼭𖽙𖾐 𖼮𖽙𖾐 𖼯𖽙𖾐 𖼰𖽙𖾐 𖼱𖽙𖾐 𖼲𖽙𖾐 𖼳𖽙𖾐 𖼴𖽙𖾐 𖼵𖽙𖾐 𖼶𖽙𖾐 𖼷𖽙𖾐 𖼸𖽙𖾐 𖼹𖽙𖾐 𖼺𖽙𖾐 𖼻𖽙𖾐 𖼼𖽙𖾐 𖼽𖽙𖾐 𖼾𖽙𖾐 𖼿𖽙𖾐 𖽀𖽙𖾐 𖽁𖽙𖾐 𖽂𖽙𖾐 𖽃𖽙𖾐 𖽄𖽙𖾐</p>
+<h3>Final above placement:</h3>
+<p>𖼀𖽙𖾑 𖼁𖽙𖾑 𖼂𖽙𖾑 𖼃𖽙𖾑 𖼄𖽙𖾑 𖼅𖽙𖾑 𖼆𖽙𖾑 𖼇𖽙𖾑 𖼈𖽙𖾑 𖼉𖽙𖾑 𖼊𖽙𖾑 𖼋𖽙𖾑 𖼌𖽙𖾑 𖼍𖽙𖾑 𖼎𖽙𖾑 𖼏𖽙𖾑 𖼐𖽙𖾑 𖼑𖽙𖾑 𖼒𖽙𖾑 𖼓𖽙𖾑 𖼔𖽙𖾑 𖼕𖽙𖾑 𖼖𖽙𖾑 𖼗𖽙𖾑 𖼘𖽙𖾑 𖼙𖽙𖾑 𖼚𖽙𖾑 𖼛𖽙𖾑 𖼜𖽙𖾑 𖼝𖽙𖾑 𖼞𖽙𖾑 𖼟𖽙𖾑 𖼠𖽙𖾑 𖼡𖽙𖾑 𖼢𖽙𖾑 𖼣𖽙𖾑 𖼤𖽙𖾑 𖼥𖽙𖾑 𖼦𖽙𖾑 𖼧𖽙𖾑 𖼨𖽙𖾑 𖼩𖽙𖾑 𖼪𖽙𖾑 𖼫𖽙𖾑 𖼬𖽙𖾑 </p>
+<p>𖼭𖽙𖾑 𖼮𖽙𖾑 𖼯𖽙𖾑 𖼰𖽙𖾑 𖼱𖽙𖾑 𖼲𖽙𖾑 𖼳𖽙𖾑 𖼴𖽙𖾑 𖼵𖽙𖾑 𖼶𖽙𖾑 𖼷𖽙𖾑 𖼸𖽙𖾑 𖼹𖽙𖾑 𖼺𖽙𖾑 𖼻𖽙𖾑 𖼼𖽙𖾑 𖼽𖽙𖾑 𖼾𖽙𖾑 𖼿𖽙𖾑 𖽀𖽙𖾑 𖽁𖽙𖾑 𖽂𖽙𖾑 𖽃𖽙𖾑 𖽄𖽙𖾑</p>
+<h3>Final combination above placement:</h3>
+<p>𖼀𖽡𖽝𖾑 𖼁𖽡𖽝𖾑 𖼂𖽡𖽝𖾑 𖼃𖽡𖽝𖾑 𖼄𖽡𖽝𖾑 𖼅𖽡𖽝𖾑 𖼆𖽡𖽝𖾑 𖼇𖽡𖽝𖾑 𖼈𖽡𖽝𖾑 𖼉𖽡𖽝𖾑 𖼊𖽡𖽝𖾑 𖼋𖽡𖽝𖾑 𖼌𖽡𖽝𖾑 𖼍𖽡𖽝𖾑 𖼎𖽡𖽝𖾑 𖼏𖽡𖽝𖾑 𖼐𖽡𖽝𖾑 𖼑𖽡𖽝𖾑 𖼒𖽡𖽝𖾑 𖼓𖽡𖽝𖾑 𖼔𖽡𖽝𖾑 𖼕𖽡𖽝𖾑 𖼖𖽡𖽝𖾑 𖼗𖽡𖽝𖾑 𖼘𖽡𖽝𖾑 𖼙𖽡𖽝𖾑 𖼚𖽡𖽝𖾑 𖼛𖽡𖽝𖾑 𖼜𖽡𖽝𖾑 𖼝𖽡𖽝𖾑 𖼞𖽡𖽝𖾑 𖼟𖽡𖽝𖾑 𖼠𖽡𖽝𖾑 𖼡𖽡𖽝𖾑 𖼢𖽡𖽝𖾑 𖼣𖽡𖽝𖾑 𖼤𖽡𖽝𖾑 𖼥𖽡𖽝𖾑 𖼦𖽡𖽝𖾑 𖼧𖽡𖽝𖾑 𖼨𖽡𖽝𖾑 𖼩𖽡𖽝𖾑 𖼪𖽡𖽝𖾑 𖼫𖽡𖽝𖾑 𖼬𖽡𖽝𖾑 </p>
+<p>𖼭𖽡𖽝𖾑 𖼮𖽡𖽝𖾑 𖼯𖽡𖽝𖾑 𖼰𖽡𖽝𖾑 𖼱𖽡𖽝𖾑 𖼲𖽡𖽝𖾑 𖼳𖽡𖽝𖾑 𖼴𖽡𖽝𖾑 𖼵𖽡𖽝𖾑 𖼶𖽡𖽝𖾑 𖼷𖽡𖽝𖾑 𖼸𖽡𖽝𖾑 𖼹𖽡𖽝𖾑 𖼺𖽡𖽝𖾑 𖼻𖽡𖽝𖾑 𖼼𖽡𖽝𖾑 𖼽𖽡𖽝𖾑 𖼾𖽡𖽝𖾑 𖼿𖽡𖽝𖾑 𖽀𖽡𖽝𖾑 𖽁𖽡𖽝𖾑 𖽂𖽡𖽝𖾑 𖽃𖽡𖽝𖾑 𖽄𖽡𖽝𖾑</p>
+<h3>Final below placement:</h3>
+<p>𖼀𖽙𖾒 𖼁𖽙𖾒 𖼂𖽙𖾒 𖼃𖽙𖾒 𖼄𖽙𖾒 𖼅𖽙𖾒 𖼆𖽙𖾒 𖼇𖽙𖾒 𖼈𖽙𖾒 𖼉𖽙𖾒 𖼊𖽙𖾒 𖼋𖽙𖾒 𖼌𖽙𖾒 𖼍𖽙𖾒 𖼎𖽙𖾒 𖼏𖽙𖾒 𖼐𖽙𖾒 𖼑𖽙𖾒 𖼒𖽙𖾒 𖼓𖽙𖾒 𖼔𖽙𖾒 𖼕𖽙𖾒 𖼖𖽙𖾒 𖼗𖽙𖾒 𖼘𖽙𖾒 𖼙𖽙𖾒 𖼚𖽙𖾒 𖼛𖽙𖾒 𖼜𖽙𖾒 𖼝𖽙𖾒 𖼞𖽙𖾒 𖼟𖽙𖾒 𖼠𖽙𖾒 𖼡𖽙𖾒 𖼢𖽙𖾒 𖼣𖽙𖾒 𖼤𖽙𖾒 𖼥𖽙𖾒 𖼦𖽙𖾒 𖼧𖽙𖾒 𖼨𖽙𖾒 𖼩𖽙𖾒 𖼪𖽙𖾒 𖼫𖽙𖾒 𖼬𖽙𖾒</p>
+<p>𖼭𖽙𖾒 𖼮𖽙𖾒 𖼯𖽙𖾒 𖼰𖽙𖾒 𖼱𖽙𖾒 𖼲𖽙𖾒 𖼳𖽙𖾒 𖼴𖽙𖾒 𖼵𖽙𖾒 𖼶𖽙𖾒 𖼷𖽙𖾒 𖼸𖽙𖾒 𖼹𖽙𖾒 𖼺𖽙𖾒 𖼻𖽙𖾒 𖼼𖽙𖾒 𖼽𖽙𖾒 𖼾𖽙𖾒 𖼿𖽙𖾒 𖽀𖽙𖾒 𖽁𖽙𖾒 𖽂𖽙𖾒 𖽃𖽙𖾒 𖽄𖽙𖾒</p>
+</body>
+</html>
