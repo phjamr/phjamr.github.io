@@ -130,7 +130,7 @@
             <h1>Introduction</h1>
           </div>
           <p>Miao Unicode appears to be the first publicly available font to support the Unicode block ‘Miao’.</p>
-          <p>It also appears to be the first publicly available font which is fully functional for all the varieties of the script in current use. Previous solutions (like the <a href=http://www.archives.ecs.soton.ac.uk/miao/>Ahmao</a> font) were specialized for only one of the user communities.</p>
+          <p>It also appears to be the first publicly available font which is fully functional for all the varieties of the script in current use. Previous solutions (like the <a href=http://www.archives.ecs.soton.ac.uk/miao/WritingMiao/WritingMiao.htm#font>Ahmao</a> font) were specialized for only one of the user communities.</p>
           <p>The font design is based on Adobe’s <a href=http://sourceforge.net/projects/sourcesans.adobe/>Source Sans Pro</a>.</p>
           <p>Both Miao Unicode and Adobe Source Sans Pro are licensed under SIL’s Open Font License, which means that they are available free of charge, and access is provided to the source files. Details of the license are given on <a href=http://scripts.sil.org/OFL>SIL’s OFL page</a>. </p>
         </section>
@@ -149,11 +149,10 @@
           <p><em>This information is condensed from the following sources:</em></p>
 <ul>
             <li><a href=http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3789.pdf>Unicode Proposal, 26 March 2010 (pdf)</a>: the final proposal before Miao was officially included in Unicode. Provides extensive background information on the script’s history and use.</li>
-            <li><a href=http://www.unicode.org/versions/Unicode6.2.0/ch13.pdf#page=28>Official Unicode description (pdf)</a>: brief write-up and discussion of how to implement the unicode encoding</li>
-            <li><a href=http://scriptsource.org/scr/Plrd>Script Source</a>: description of history and use, with text samples</li>
-            <li><a href=http://www.omniglot.com/writing/pollardmiao.htm>Omniglot</a>: description of history and use, with text samples; includes IPA</li>
-            <li><a href=http://en.wikipedia.org/wiki/Pollard_script>Wikipedia</a>: description of history and use, with text samples</li>
-            <li><a href=http://www.archives.ecs.soton.ac.uk/miao/>R. Keith Parsons’ and P. Kenneth Parsons’ Hua Miao pages</a>: collection of language and script related resources</li>
+            <li><a href=http://www.unicode.org/versions/Unicode6.2.0/ch13.pdf#page=28>Official Unicode description (pdf)</a>: brief write-up and discussion of how to implement the unicode encoding.</li>
+            <li><a href=http://scriptsource.org/scr/Plrd>Script Source</a>: description of history and use, with text samples.</li>
+            <li><a href=http://www.omniglot.com/writing/pollardmiao.htm>Omniglot</a>: description of history and use, with text samples; includes IPA.</li>
+            <li><a href=http://en.wikipedia.org/wiki/Pollard_script>Wikipedia</a>: description of history and use, with text samples.</li>
           </ul>
 
         </section>
@@ -166,8 +165,9 @@
           <div class="page-header">
             <h1>Enabling Graphite in Firefox</h1>
           </div>
-          <p>The Miao script requires complex text rendering. The font achieves this by using the <a href=http://graphite.sil.org/>Graphite system</a> produced by SIL.</p>
-          <p>Currently <a href=http://www.mozilla.org/firefox>Mozilla Firefox</a> (Version 11+) is the only browser that supports Graphite. Therefore if you would like to view samples of the Miao Unicode font on this page then you should open it in Firefox.</p>
+          <p>The Miao script requires complex text rendering. The Miao Unicode font achieves this by using the <a href=http://graphite.sil.org/>Graphite system</a> produced by SIL.</p>
+          <p>Before you can view text samples or test the font yourself, you need to make sure that your browser has Graphite enabled.</p>
+          <p>Currently <a href=http://www.mozilla.org/firefox>Mozilla Firefox</a> (Version 11+) is the only browser that supports Graphite. (Some other Mozilla-based browsers, like SeaMonkey, may support it as well.) Therefore if you would like to view samples of the Miao Unicode font on this page, then you should view it in Mozilla Firefox.</p>
           <p>Once you are in Firefox, you probably will need to switch on the Graphite rendering. But first test to check if it’s already working. In the left hand box the small ‘U’ should be sitting on top of the main character; if it is, Graphite is working correctly in your browser.</p>
 
           <div class="row-fluid">
@@ -183,7 +183,7 @@
           <p>If the small ‘U’ stays on the baseline (like in the comparison ‘beside’ box), with a dotted circle to the right of it, Graphite is not working.</p>
 
           <p><strong>Enable Graphite by following these steps:</strong>
-          <br><span class="muted">(copied from <a href=http://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_firefox#switchon>Graphite’s own website</a> under <a href=http://creativecommons.org/licenses/by-sa/3.0/>CC-BY-SA</a>)</span></p>
+          <br><span class="muted em">(copied from <a href=http://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_firefox#switchon>Graphite’s own website</a> thanks to <a href=http://creativecommons.org/licenses/by-sa/3.0/>CC-BY-SA</a>)</span></p>
 
 <blockquote>
             <ul>
@@ -211,7 +211,7 @@
               <li>Look through the official <a href=http://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_firefox>Graphite in Firefox documentation</a>.</li>
             </ol>
 
-          <p>One other aspect of Graphite support to check is the ability to use <em>features</em>. If you are using version 15 of Firefox or higher, then the following features should display correctly:</p>
+          <p id="small-caps">One other aspect of Graphite support to check is the ability to use <em>features</em>. If you are using version 15 of Firefox or higher, then the following features should display correctly:</p>
 
           <div class="row-fluid">
             <div class="span6">
@@ -245,7 +245,7 @@
           </div>
           <p>Comparison of existing scanned images with the equivalent in the Miao Unicode font.</p>
 
-          <p class="muted em">For a stress-test of hypothetical, if unattested, combinations, see <a href=./MiaoTest.html>MiaoTest</a>.</p>
+          <p class="muted em">For a stress-test of hypothetical but unattested combinations, see <a href=./MiaoTest.html>MiaoTest</a>.</p>
 
           <div class="row-fluid">
             <div class="span6">
@@ -272,9 +272,9 @@
           <p>The input order is important in order to achieve consistent sorting order in lists.</p>
           <p>The main consonant, or <em>initial</em> of the syllable must always come first.</p>
           <p>This is true even when the pre-nasalization marker ‘<span class=miao-small">𖽐</span>’ comes before it. If you type the initial first and the nasal marker second then the nasal marker will jump before it, like so:</p>
-          <sample class="miao">𖼎   <span class="muted">+</span>   𖽐   <span class="muted">=</span>   𖼎𖽐</sample>
+          <sample class="miao">𖼎  <span class="muted">+</span>  𖽐  <span class="muted">=</span>  𖼎𖽐</sample>
           <p>If there is an aspiration sign, then it should come next:</p>
-          <sample class="miao">𖼎𖽐   <span class="muted">+</span>   𖽑   <span class="muted">=</span>   𖼎𖽐𖽑</sample>
+          <sample class="miao">𖼎𖽐  <span class="muted">+</span>  𖽑  <span class="muted">=</span>  𖼎𖽐𖽑</sample>
           <p>The vowel or <em>final</em> should come next. A combination of two finals is allowed, but not more.
           <br> <span class="muted">If you know of situations where a combination of three finals is required, please <a href=https://github.com/phjamr/MiaoUnicode/issues>file an issue on github</a>. I have not seen this so far, and it does not seem likely.</span></p>
           <p>Lastly the tone marker is added.</p>
@@ -283,11 +283,11 @@
           <div class="row-fluid">
             <div class="span6">
               <p><strong>Tone marking by position:</strong></p>
-          <sample class="miao">𖼎𖽐𖽑   <span class="muted">+</span>  𖽦   <span class="muted">+</span>   𖾑   <span class="muted">=</span>   𖼎𖽐𖽑𖽦𖾑</sample>
+          <sample class="miao">𖼎𖽐𖽑  <span class="muted">+</span>  𖽦  <span class="muted">+</span>  𖾑  <span class="muted">=</span>  𖼎𖽐𖽑𖽦𖾑</sample>
             </div>
             <div class="span6">
               <p><strong>Tone marking by letter (Chuxiong):</strong></p>
-          <sample class="miao">𖼎𖽐𖽑   <span class="muted">+</span>   𖽦    <span class="muted">+</span>  𖾔   <span class="muted">=</span>   𖼎𖽐𖽑𖽦𖾔</sample>
+          <sample class="miao">𖼎𖽐𖽑  <span class="muted">+</span>  𖽦  <span class="muted">+</span>  𖾔  <span class="muted">=</span>  𖼎𖽐𖽑𖽦𖾔</sample>
             </div>
 
           <p>The following table summarizes these input stages.</p>
@@ -669,7 +669,7 @@
  </tr>
 </table>
 
-<p><strong>Miao tones:</strong></p>
+<p><strong>Tones:</strong></p>
 <table class="table table-striped table-bordered table-condensed">
  <tr class="miao-big"> <!-- Miao Tones -->
 <td class="miao">𖾏</td>
@@ -737,12 +737,14 @@
             <h1>Download & install</h1>
           </div>
 
-          <p>Section coming soon.</p>
-          <p>Download from <a href=https://github.com/phjamr/MiaoUnicode/blob/master/MiaoUnicode-Regular.ttf>github page</a>. Click ‘view raw’ and save to a location of your choice.</p>
-          <p>Install according to your system; most modern operating systems will have an “install” button on the window when you open the font. In Windows XP you need to copy the file into the C: > Windows > Fonts directory.</p>
-          <p>Check it’s working by restarting the browser after install and looking at <a href=http://www.alanwood.net/unicode/miao.html>Alan Wood’s test page</a>. This is also a helpful reference resource.</li>
-         <p>As Alan Wood suggests, it can be helpful to compare with the <a href=http://www.unicode.org/charts/PDF/U16F00.pdf>Official Unicode chart (pdf)</a>.</p>
-         <p>Beyond Firefox, a handful of applications allow  LibreOffice, XeTeX; pango-graphite.</p>
+          <p>Download from the <a href=https://github.com/phjamr/MiaoUnicode/blob/master/MiaoUnicode-Regular.ttf>github page</a>. Click ‘view raw’ and save the file to a location of your choice.</p>
+          <p>Install procedure varies according to your system. Most modern operating systems will have an “install” button on the window that appears when you open the font.</p>
+          <p>In Windows XP you need to copy the file into the C: > Windows > Fonts directory.</p>
+          <p>After installing, check that it’s working by restarting your browser and going to <a href=http://www.alanwood.net/unicode/miao.html>Alan Wood’s test page</a>. This is also a helpful reference resource. If all of the characters display, the font has probably installed correctly.</li>
+         <p>As Alan Wood suggests, it can be helpful to compare the characters which appear on the test page with the <a href=http://www.unicode.org/charts/PDF/U16F00.pdf>Official Unicode chart (pdf)</a>.</p>
+         <p>The font can only be used properly in an application which supports Graphite. A list of these is given on the <a href=http://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_apps>Graphite website</a>. (Note that Microsoft Word <em>cannot</em> display Miao Unicode correctly.)</p>
+         <p>For most users the most important application which supports Graphite will probably be the word processor <a href=http://www.libreoffice.org/>LibreOffice Writer</a>.</p>
+         <p>For Linux users, it is possible to expand the number of Graphite-supporting applications by installing the pango-graphite package. (For example, this will enable Graphite support in gedit and Inkscape.)</p>
         </section>
 
 
@@ -754,11 +756,27 @@
             <h1>Graphite features</h1>
           </div>
           <p>Section coming soon.</p>
-          <p>Graphite programming enables it to work, and also gives scope for aesthetic adjustment. For example, to shift the vowel up to the top right position:</p>
-<pre class="prettyprint">
-  clsFina (shift.y = 216m) / _ clsFina? gTopRight ;
-</pre>
-          <p>Likewise kerning finals into the side of letters like Y and A.</p>
+          <p>The font relies on Graphite programming to work, but Graphite also gives scope for aesthetic adjustment and stylistic features.</p>
+          <p>For those interested in using the Latin-script features shown <a href="./miao.html#small-caps">above</a>, you can enable them in LibreOffice/OpenOffice by using the following codes in the font field:</p>
+          <ul>
+           <li>Miao Unicode:smcp=1 for small caps</li>
+           <li>Miao Unicode:c2sc=1 for all small caps, including numerals and some punctuation</li>
+           <li>Miao Unicode:onum=1 for old-style figures</a>
+          </ul>
+          <p>Hopefully soon additional features will be added for the Miao script. The most pressing of these is the Chuxiong-style ‘wart’ (dot instead of ring; see the first of the <a href="./miao.html#known-issues">Known Issues</a>).</p>
+
+          <p>For those interested in the kerning currently operational in the Miao Unicode font, the following examples give an illustration. In the present version there are just four kerning classes: a ‘major’ (-140) and a ‘minor’ (-40) kern for inset bottom (‘V’ shaped), the same for inset top (‘A’ shape). As mentioned in the <a href="./miao.html#known-issues">Known Issues</a>, the kerning and spacing in the font as it stands is inadequate and requires fine-tuning.</p>
+
+          <div class="row-fluid">
+            <div class="span6">
+              <p><strong>Top Right position:</strong></p>
+          <sample class="miao">𖼖𖽺𖾐 𖼽𖽔𖾐 𖼚𖽑𖽡𖽝𖾐</sample>
+            </div>
+            <div class="span6">
+              <p><strong>Baseline position:</strong></p>
+          <sample class="miao">𖼈𖽺 𖼊𖽑𖽔 𖼳𖽘</sample>
+            </div>
+
         </section>
 
 
@@ -813,6 +831,7 @@
             <li>The outlines of many of the finals are less-than-optimally drawn.</li>
             <li>Some of the Graphite code seems “precarious”: it works, but doesn’t seem like a satisfying solution. This will probably be re-written gradually as the font is developed.</li>
             <li>It is built on a compiled version of Adobe Source Sans Pro, rather than on its source. This does not appear to have any adverse effects (all information, including hinting instructions, is retained), but it is clearly not ideal.</li>
+            <li>For some reason the OpenType style set names are interfering with the copyright field in the font, so that the copyright often displays as “straight l” or “slashed zero” instead of the intended message about the OFL license etc. I have not been able to ascertain why this is happening.</li>
           </ul>
           <p>If you are able to offer advice or assistance with any of the above, please <a href="./miao.html#contact">get in touch</a>.</p>
         </section>
@@ -826,16 +845,20 @@
           </div>
           <p>Of the points mentioned under “<a href=./miao.html#known-issues>Known Issues</a>”, I will hopefully be able to tackle the following in the coming months:</p>
 <ul>
-            <li>Create stylistic variant for the Chuxiong ‘wart’.</li>
+            <li>Create stylistic variants for the Chuxiong ‘wart’.</li>
             <li>Adjust spacing and kerning.</li>
             <li>Redraw some glyphs for smoother and more consistent outlines.</li>
-</ul>
-          <p>There are a few additional features which may be possible to develop:</p>
-<ul>
+          </ul>
+
+          <p>There are a few additional features which may be possible to develop in the more distant future:</p>
+
+          <ul>
             <li>Make a bold version? It is difficult to know how much expansion the finals (vowel signs) could handle.</li>
             <li>Expand the Graphite programming to match more of the Latin-script OpenType features of Source Sans Pro?</li>
-            <li>Keyboard layout: not exactly related to the font, but important. I intend to create a keyboard for Linux-based systems only, which can of course be adjusted according to the preferences of interested users. (I am aware of the legacy solution described <a href=http://www.archives.ecs.soton.ac.uk/miao/WritingMiao/WritingMiao.htm#template>here</a>, but I do not know how widely used it has become. There apparently have been <a href=http://www.ubs-translations.org/fileadmin/publications/tbt/practical/BT-62-4-2011-Yu.pdf#page=5>other legacy solutions (<em>link to pdf</em>)</a> using Keyman software, but to my knowledge none were publicly released.)</li>
-</ul>
+            <li>Create a Miao keyboard layout. (Not “font” development, but important for maximizing the font’s usability.) I intend to create a keyboard for Linux-based systems, and hope that others will be able to make a layout for Mac and Windows.
+            <br>Concerning the exact design of the layout, I do not know whether there are any widespread legacy (that is, not Unicode) solutions which should be emulated, or whether the layout needs to be designed from scratch. It certainly will need to be adjusted according to the feedback of interested users.
+            <br><span class=muted>(I am aware of the legacy solution described <a href=http://www.archives.ecs.soton.ac.uk/miao/WritingMiao/WritingMiao.htm#template>here</a>, but I do not know how widely used it is. There apparently have been <a href=http://www.ubs-translations.org/fileadmin/publications/tbt/practical/BT-62-4-2011-Yu.pdf#page=5>other legacy solutions (<em>link to pdf</em>)</a> using Keyman software, but to my knowledge none were publicly released.)</span></li>
+          </ul>
           <p>Again, I would be <a href="./miao.html#contact">happy to hear from you</a> if you are interested in collaborating.</p>
         </section>
 
