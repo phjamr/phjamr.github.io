@@ -46,24 +46,48 @@
 
 .miao-lnum {
   font-family: "Miao Unicode", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
+}
+
+.miao-onum {
+  font-family: "Miao Unicode", sans-serif;
+  -moz-font-feature-settings: "onum";
 }
 
 .miao-smcp {
   font-family: "Miao Unicode", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
   letter-spacing:0.5px;
-  -moz-font-feature-settings: "smcp", "onum";
+  -moz-font-feature-settings: "smcp";
 }
 
 .miao-c2sc {
   font-family: "Miao Unicode", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
   letter-spacing:0.5px;
   -moz-font-feature-settings: "c2sc";
+}
+
+.miao-chux {
+  font-family: "Miao Unicode", sans-serif;
+  -moz-font-feature-settings: "chux";
+}
+
+.miao-salt {
+  font-family: "Miao Unicode", sans-serif;
+  -moz-font-feature-settings: "salt";
+}
+
+.miao-aspr {
+  font-family: "Miao Unicode", sans-serif;
+  -moz-font-feature-settings: "aspr";
+}
+
+.miao-malf {
+  font-family: "Miao Unicode", sans-serif;
+  -moz-font-feature-settings: "chux", "salt", "aspr";
+}
+
+.miao-lalf {
+  font-family: "Miao Unicode", sans-serif;
+  -moz-font-feature-settings: "smcp", "onum";
 }
 
 .mro {
@@ -1053,7 +1077,7 @@ pre {
 
 .code {
   font-family: source-code-pro, 'ubuntu mono', Consolas, Monaco, Menlo, monospace;
-  font-size: 17px;
+  font-size: 15px;
 } /* changed add code class */
 
 footer {
@@ -1072,7 +1096,7 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 21px;
   word-break: break-all;
   word-wrap: break-word;
@@ -1153,7 +1177,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 14px;
+  font-size: inherit;
   font-weight: normal;
   line-height: 21px;
 }

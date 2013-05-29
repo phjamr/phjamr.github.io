@@ -19,10 +19,36 @@
 
     <!-- override css for input text style to make it Miao font -->
     <style type="text/css"> 
-      input {
+      textarea, input {
        font-family: 'miao unicode', sans-serif;
-       -moz-font-feature-settings: "onum";
       }
+
+  .feat-table {
+    width: 100%;
+    display: none;
+}
+
+  .kb-cont {
+    width: 100%;
+    height: auto;
+    padding-top: 33%;
+    position: relative;
+}
+
+  .kb-base, 
+  .kb-over {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+  .kb-over {
+    z-index: 10;
+/*    display: none; */
+}
+
 /* not necessary to change default table font - class set in tr
       .table-condensed td {
        font-family: 'miao unicode', sans-serif;
@@ -35,7 +61,7 @@
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
-
+    
     <!-- Le fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
@@ -100,6 +126,7 @@
           <li><a href="#samples">Text samples</a></li>
           <li><a href="#input">Text input (interactive)</a></li>
           <li><a href="#install">Download & install</a></li>
+          <li><a href="#keyboard">Keyboard for Linux</a></li>
           <li><a href="#graphite-features">Graphite features</a></li>
           <li><a href="#lisu-script">Lisu (Fraser) script</a></li>
           <li><a href="#known-issues">Known issues</a></li>
@@ -129,9 +156,10 @@
           <div class="page-header">
             <h1>Introduction</h1>
           </div>
-          <p>Miao Unicode appears to be the first publicly available font to support the Unicode block ‘Miao’.</p>
-          <p>It also appears to be the first publicly available font which is fully functional for all the varieties of the script in current use. Previous solutions (like the <a href=http://www.archives.ecs.soton.ac.uk/miao/WritingMiao/WritingMiao.htm#font>Ahmao</a> font) were specialized for only one of the user communities.</p>
-          <p>The font design is based on Adobe’s <a href=http://sourceforge.net/projects/sourcesans.adobe/>Source Sans Pro</a>.</p>
+          <p>Miao Unicode is an open-source, Graphite enabled font which supports the ‘Miao’, or ‘Pollard’ script.</p>
+          <p>Miao was officially added to Unicode in January 2012. The Miao Unicode font makes use of this standardized encoding.</p>
+          <p>The font aims to be fully functional for all the varieties of the script in current use. (Fonts made before Miao was included in the Unicode Standard, like the <a href=http://www.archives.ecs.soton.ac.uk/miao/WritingMiao/WritingMiao.htm#font>Ahmao</a> font, were specialized for only one of the several user communities.)</p>
+          <p>The design is based on Adobe’s <a href=http://sourceforge.net/projects/sourcesans.adobe/>Source Sans Pro</a>.</p>
           <p>Both Miao Unicode and Adobe Source Sans Pro are licensed under SIL’s Open Font License, which means that they are available free of charge, and access is provided to the source files. Details of the license are given on <a href=http://scripts.sil.org/OFL>SIL’s OFL page</a>. </p>
         </section>
 
@@ -237,6 +265,7 @@
 
 
 
+
         <!-- Samples
         ================================================== -->
         <section id="samples">
@@ -261,6 +290,7 @@
 
 
 
+
         <!-- Text input
         ================================================== -->
         <section id="input">
@@ -275,10 +305,11 @@
           <sample class="miao">𖼎  <span class="muted">+</span>  𖽐  <span class="muted">=</span>  𖼎𖽐</sample>
           <p>If there is an aspiration sign then it should come next:</p>
           <sample class="miao">𖼎𖽐  <span class="muted">+</span>  𖽑  <span class="muted">=</span>  𖼎𖽐𖽑</sample>
+          <p>(You must have the nasal marker before the aspiration marker.)</p>
           <p>The final (usually a vowel, sometimes with n or ng) should come next. A combination of two finals is allowed, but not more.
-          <br> <span class="muted">If you know of situations where a combination of three finals is required, please <a href=https://github.com/phjamr/MiaoUnicode/issues>file an issue on github</a>. I have not seen this so far, and it does not seem likely.</span></p>
+          <br> <span class="muted">If you know of situations where a combination of three finals is required, please <a href=https://github.com/phjamr/MiaoUnicode/issues>file an issue on github</a>. I have never seen this, however, and it does not seem likely.</span></p>
           <p>Lastly the tone marker is added.</p>
-          <p>There are two ways of marking the tone in modern use: by position (the most common option), or by a tone letter (used in Chuxiong orthography).</p>
+          <p>There are two ways of marking the tone in modern use: by position (the most common option), or by a tone letter (used in the Chuxiong orthography).</p>
 
           <div class="row-fluid">
             <div class="span6">
@@ -360,11 +391,85 @@
 
     <p>Experiment with the Miao Unicode font by copying and pasting from the charts below into this box.</p>
 
+<!--
 <form>
   <fieldset>
     <input type="text" placeholder="𖼊𖽺𖾐 𖼣𖽔 𖼊𖽱𖾐 𖼽𖽔𖾑 𖼄𖽻 𖼎𖽐𖽑𖽦𖾑 𖼀𖽱𖾐 𖼐𖽻𖾏 …">
   </fieldset>
 </form>
+-->
+
+    <textarea id="interact" rows="2" placeholder="𖼊𖽺𖾐 𖼣𖽔 𖼊𖽱𖾐 𖼽𖽔𖾑 𖼄𖽻 𖼎𖽐𖽑𖽦𖾑 𖼀𖽱𖾐 𖼐𖽻𖾏 …"></textarea>
+
+   <label id="feat-table-show" class="muted" style="margin-top:6px">[show/hide feature table]</label>
+   
+   <div class="feat-table" id="feat-table">
+
+    <p class="em">These features allow you to use different styles. For further explanation, see the “<a href="./miao.html#graphite-features">Graphite features</a>” section below.</p>
+    <table class="table table-bordered table-condensed">
+      <tr>
+        <td rowspan="2">
+          <label class="radio">
+             <input type="radio" id="none" name="feat" value="none" checked="checked">
+             none
+          </label>
+        </td>
+        <td class="strong">Miao:</td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="chux" name="feat" value="chux">
+             Chuxiong
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="salt" name="feat" value="salt">
+             stylistic alternates
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="aspr" name="feat" value="aspr">
+             aspiration always on right
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="malf" name="feat" value="malf">
+             all Miao features
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td class="strong">Latin:</td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="smcp" name="feat" value="smcp">
+             small caps
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="c2sc" name="feat" value="c2sc">
+             all small caps
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="onum" name="feat" value="onum">
+             old-style figures
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="lalf" name="feat" value="lalf">
+             smcp & onum
+          </label>
+        </td>
+      </tr>
+    </table>
+
+    </div>
 
 <p>The following charts give a summary of the Miao Unicode block according to character type. The Unicode transcriptions are given here; for IPA see the <a href=http://www.omniglot.com/writing/pollardmiao.htm>Miao Omniglot page.</a></p>
 <p><strong>Initials (~consonants):</strong></p>
@@ -712,8 +817,7 @@
  </tr>
 </table>
 
-<p>Notes:
-<br>* Yi language variant
+<p>* Yi language variant
 <br>† Archaic form
 <br>‡ Post-1949 reform variant; probably obsolete
 <br>§ Chuxiong A-Hmao variant</p>
@@ -725,7 +829,7 @@
           <br> <span class="muted">NB: there appears to have been a change in tone classification between that preliminary proposal, where ‘<span class="miao-small">𖼻</span>’ marks tone 1 and tone 3 is unmarked, and the final encoding, where ‘<span class="miao-small">𖼻</span>’ marks tone 3 and tone 1 is unmarked, apparently following the publication of <a href=http://www.unicode.org/L2/L2007/07299-n3335.pdf#page=16>this chart (Illustration 1; pdf)</a>.</span></li>
         </ul>
         
-        <p>There is currently no keyboard available for the Unicode encoding of Miao. I intend to create one for Linux-based systems, but not Mac or Windows. (See <a href=./miao.html#road-map>Road Map</a>.)</p>
+        <p>See “<a href="./miao.html#keyboard">Keyboard for Linux</a>” for instructions on how to type using your keyboard (Linux only, not Mac or Windows).</p>
         </section>
 
 
@@ -737,9 +841,10 @@
             <h1>Download & install</h1>
           </div>
 
-          <p>Download from the <a href=https://github.com/phjamr/MiaoUnicode/blob/master/MiaoUnicode-Regular.ttf>github page</a>. Click ‘view raw’ and save the file to a location of your choice.</p>
-          <p>The install procedure varies according to your system. Most modern operating systems will have an “install” button on the window that appears when you open the font.</p>
-          <p>In Windows XP you need to copy the file into the C: > Windows > Fonts directory.</p>
+          <p>Download the font file from the <a href=https://github.com/phjamr/MiaoUnicode/blob/master/MiaoUnicode-Regular.ttf>github page</a>. Click ‘view raw’ and save the file to a location of your choice.</p>
+          <p>The install procedure varies according to your system. Most modern operating systems have an “install” button on the window that appears when you open the font. Click the install button.</p>
+          <p>In Windows XP you need to copy the file into the C:\Windows\Fonts directory.</p>
+          <p>(If you need more help with the font installation, there are a number of websites which give instructions. See for example <a href=http://www.adobe.com/products/type/install-instructions.html>Adobe’s page</a> on installing fonts in Windows and Mac.</p>
           <p>After installing, check that it’s working by restarting your browser and going to <a href=http://www.alanwood.net/unicode/miao.html>Alan Wood’s test page</a>. This is also a helpful reference resource. If all of the characters display, the font has probably installed correctly.</li>
          <p>As Alan Wood suggests, it can be helpful to compare the characters which appear on the test page with the <a href=http://www.unicode.org/charts/PDF/U16F00.pdf>Official Unicode chart (pdf)</a>.</p>
          <p>The font can only be used properly in an application which supports Graphite. A list of these is given on the <a href=http://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_apps>Graphite website</a>. (Note that Microsoft Word <em>cannot</em> display Miao Unicode correctly.)</p>
@@ -749,23 +854,163 @@
 
 
 
+        <!-- Keyboard
+        ================================================== -->
+        <section id="keyboard">
+          <div class="page-header">
+            <h1>Keyboard for Linux</h1>
+          </div>
+          <p>I have developed a Miao keyboard layout for Linux systems. I do not intend to create keyboard layouts for Mac or Windows, but I would encourage others to build on my work to do so.</p>
+          <p>If you do not use Linux but you need to use the keyboard layout, remember that there are various options for installing a Linux operating system alongside your current one (for example, see <a href=http://www.ubuntu.com/download/desktop/windows-installer>Ubuntu Windows installer</a> and <a href=https://help.ubuntu.com/community/WindowsDualBoot)>Ubuntu dual boot</a>). </p>
+          <p>The Miao layout very roughly corresponds to the sounds of the Latin letters on the <span class="miao-smcp">qwerty</span> keyboard.</p>
+          <p>Please <a href="./miao.html#contact">contact me (or file an issue on Github)</a> if you have a suggestion for how to improve the keyboard layout.</p>
+          <p>It has been tested to work on <a href="http://www.ubuntu.com/">Ubuntu</a>, and the “easy method” installation instructions are specifically for Ubuntu.</p>
+          <p>The keyboard should work properly on other distributions (e.g. <a href="http://www.linuxmint.com/">Linux Mint</a>, <a href="http://fedoraproject.org/">Fedora</a>, and the <a href="http://www.ubuntu.com/about/about-ubuntu/derivatives">Ubuntu derivatives</a>), but the files may need to be placed in different locations.</p>
+            <h2>Easy installation method</h2>
+          <p>Save these two files in your “Downloads” folder:
+          <br><span class="muted em">right-click and choose “save link as”</span></p>
+          <ul>
+            <li><a href="https://raw.github.com/phjamr/MiaoUnicode/master/kb/miao">miao</a></li>
+            <li><a href="https://raw.github.com/phjamr/MiaoUnicode/master/kb/evdev.xml">evdev.xml</a></li>
+          </ul>
+          <p>Open a terminal. You can do this by holding down ‘ctrl’ and ‘alt’ and pressing ‘t’.</p>
+          <p>In the terminal, copy and paste this line.
+          <br><span class="muted em">Note that in the terminal you have to add ‘shift’ in order to paste: ctrl + shift + v. You can also use the menu to select Edit > Paste.</span></p>
+          <pre>sudo cp ~/Downloads/mro /usr/share/X11/xkb/symbols/mro</pre>
+          <p>The terminal will now ask for your password. Type it and press enter.
+          <br><span class="muted em">Note that the terminal does not display dots or stars while you type your password, so it might look like it’s not working. Don’t worry, it is working.</span></p>
+          <p>When you have typed the password it will now go onto a new line. That means it has successfully copied the file from your Downloads folder to the place where the computer can use it.</p>
+          <p>You now need to do the same for the second file. Copy this line into the terminal:</p>
+          <pre>sudo cp ~/Downloads/evdev.xml /usr/share/X11/xkb/rules/evdev.xml</pre>
+          <p>This time it should not ask for your password because you just typed it a minute ago.</p>
+          <p>You must now restart your computer before the keyboard can be used.</p>
+          <p>When you have restarted, go the “Keyboard Layout” menu. You can find it in the system settings, or on the top panel under the keyboard icon.</p>
+          <p>Click the ‘+’ button. <br><span class="muted em">If you have four keyboard layouts already then this button will be inactive and you will need to remove one keyboard before you can add another.</span></p>
+          <p>You can find the Miao keyboard either by simply typing ‘Miao’, or by typing ‘China’ this is the primary countries where it is used.</p>
+          <p>Click ‘add’. Your keyboard is now ready to use!</p>
+            <h2>The layout</h2>
+          <p>The keyboard layout is as follows:</p>
+
+<!-- sudalyph link for compressed svgz
+          <p><img src="http://twolite.sudalyph.org/public/images/Miao_Path.svgz"
+              alt="Miao keyboard layout" title="Miao keyboard layout" style="width:100%;"></p>
+-->
+
+<div class="kb-cont">
+    <div class="kb-base">
+         <img src="./assets/img/miao.svg" 
+              alt="Miao keyboard layout" title="Miao keyboard layout" style="width:100%;">
+    </div>
+    <div class="kb-over" id="kb-over">
+         <img src="./assets/img/miao-latin.svg"
+              alt="Miao keyboard with latin" title="Miao keyboard with latin" style="width:100%;">
+    </div>
+</div>
+          <label class="checkbox">
+             <input type="checkbox" checked="true" id="kb-latin">
+             <span class="muted">show Latin letters</span>
+          </label>
+          <p>Each key has four possible options:</p>
+          <ol>
+             <li><span class="strong">Normal:</span> bottom left hand corner, black</li>
+             <li><span class="strong">Shift:</span> top left hand corner, grey</li>
+             <li><span class="strong">Alt (right):</span> bottom right hand corner, blue</li>
+             <li><span class="strong">Alt (right) and shift:</span> top right hand corner, light blue</li>
+          </ol>
+          <p>The Chuxiong tone letters can be typed using the alt (right) and the relevant number.</p>
+          <p>Usually if there is a Yi variant, it is accessed with the alt (right) key.</p>
+          <p>If a final has a vowel + nasal combination, <em>…n</em> is under the alt (right) key, and <em>…ng</em> is under the alt + shift combination.</p>
+
+
+          <h2>Advanced information</h2>
+          <p>Further details about keyboard layouts in Linux can be found at <a href=http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11>Daniel Paul O’Donnell’s blog</a> and the <a href=https://help.ubuntu.com/community/Howto%3A%20Custom%20keyboard%20layout%20definitions>Ubuntu documentation</a>. The following is a brief summary based on these resources.</p>
+          <p>If you would like to have more control over the keyboard installation, you need to copy the ‘mro’ file into the layouts folder (in Ubuntu this is /usr/share/x11/xkb/symbols), and then edit the layout list so that the file can be recognized. In Ubuntu this file is evdev.xml, in /usr/share/x11/xkb/rules.</p>
+          <p>The body of this file is the <span class="pre"><layoutList></span>. You can add the Miao entry anywhere in this section. I added it at the end, just before the <span class="pre"></layoutList></span> end marker.</p>
+          <p>The code needs to include information about the file name, script code, and the relevant languages and countries, as shown below:</p>
+            <pre class="prettyprint linenums">
+    &lt;layout&gt;
+      &lt;configItem&gt;
+        &lt;name&gt;miao&lt;/name&gt;
+        &lt;shortDescription&gt;miao&lt;/shortDescription&gt;
+        &lt;description&gt;Miao&lt;/description&gt;
+        &lt;countryList&gt;
+          &lt;iso3166Id&gt;CN&lt;/iso3166Id&gt;
+        &lt;/countryList&gt;
+        &lt;languageList&gt;
+          &lt;iso639Id&gt;hmn&lt;/iso639Id&gt;
+          &lt;iso639Id&gt;hmd&lt;/iso639Id&gt;
+          &lt;iso639Id&gt;lpo&lt;/iso639Id&gt;
+          &lt;iso639Id&gt;ywq&lt;/iso639Id&gt;
+          &lt;iso639Id&gt;ysy&lt;/iso639Id&gt;
+        &lt;/languageList&gt;
+      &lt;/configItem&gt;
+    &lt;/layout&gt;</pre>
+          <p>The iso3166 country codes can be found on <a href="https://en.wikipedia.org/wiki/ISO_3166-1">Wikipedia</a>, and the iso639 language codes can be found at <a href="http://www.ethnologue.com/">Ethnologue</a>.</p>
+          <p>If you would like to customize the keyboard in some way, the xkb system makes this very easy.</p>
+          <p>Here is an example of one line from the keyboard layout:</p>
+            <pre class="prettyprint linenums">
+key &lt;AE04&gt; { [        4,      dollar,  0x1016F95,  0x1016F9C ] };</pre>
+          <p>This shows the four characters availabed under the key <AE04> (the number 4): the first one shows normal, the second +shift, the third +alt (right), and the fourth +alt+shift.</p>
+          <p>If you wanted, for example, to have the Yuan/Yen sign ¥ instead of the dollar sign, you could replace “dollar” with U00A5.</p>
+          <p>The Miao characters require 0x10 before the Unicode hex value as they are in the Supplementary Multilingual Plane (not the Basic).</p>
+          <p>There do not seem to be any conventions regarding licensing for keyboard layouts as they are usually packaged with other software. For the sake of clarity, this keyboard layout is licensed under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a> so that it can be easily modified and distributed.</p>
+        </section>
+
+
+
+
         <!-- Graphite features
         ================================================== -->
         <section id="graphite-features">
           <div class="page-header">
             <h1>Graphite features</h1>
           </div>
-          <p>The font relies on Graphite programming to work, but Graphite also gives scope for aesthetic adjustment and stylistic features.</p>
-          <p>For those interested in using the Latin-script features shown <a href="./miao.html#small-caps">above</a>, you can enable them in LibreOffice/OpenOffice by using the following codes in the font field:</p>
-          <ul>
-           <li>Miao Unicode:smcp=1 for small caps</li>
-           <li>Miao Unicode:c2sc=1 for all small caps, including numerals and some punctuation</li>
-           <li>Miao Unicode:onum=1 for old-style figures</a>
-          </ul>
-          <p>Hopefully soon additional features will be added for the Miao script. The most pressing of these is the Chuxiong-style ‘wart’ (dot instead of ring; see the first of the <a href="./miao.html#known-issues">Known Issues</a>).</p>
+          <p>The font relies on Graphite programming to work, but Graphite also gives scope for stylistic features.</p>
 
-          <p>For those interested in the kerning currently operational in the Miao Unicode font, the following examples give an illustration. In the present version there are just six kerning classes: a ‘major’ (about -35% of average glyph width) and a ‘minor’ (about -10%) class for inset bottom (‘V’ shape), and the same for inset top (‘A’ shape) and inset middle (‘C’ shape). As mentioned in the <a href="./miao.html#known-issues">Known Issues</a>, the kerning and spacing require fine-tuning.</p>
+          <h2>Features for Miao</h2>
+          <p>There are three features currently available for the Miao script:</p>
+            <ul>
+              <li>Chuxiong ‘wart’ variant</li>
+              <li>Stylistic alternates for <span class=miao-small>𖼳</span> and <span class=miao-small>𖼴</span></li>
+              <li>Aspiration marker always on right</li>
+            </ul>
 
+            <p>The ‘wart’ (a translated technical term!) is the small circle in characters like <span class=miao-small>𖼁</span>, <span class=miao-small>𖼅</span>, and <span class=miao-small>𖼾</span>. In the Chuxiong orthography, it is rendered not as a circle but as a dot on the right of the letter, as shown in point 5 <a href=http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3789.pdf#page=2>here (pdf)</a>.</p>
+           <p>Miao Unicode has a feature called “chux” for handling this. In LibreOffice you can use this style by typing “Miao Unicode:chux=1” into the font field.</p>
+          <div class="row-fluid">
+            <div class="span6">
+              <p><strong>‘Wart’ as circle:</strong></p>
+          <sample class="miao">𖼁 𖼅 𖼾</sample>
+            </div>
+            <div class="span6">
+              <p><strong>‘Wart’ as dot</strong> (Chuxiong):</p>
+          <sample class="miao miao-chux">𖼁 𖼅 𖼾</sample>
+            </div>
+
+            <p>The <strong>‘Stylistic Alternates’</strong> in Miao Unicode are variant letter shapes which are not associated with particular regions or orthographies. In LibreOffice, the code to use these is “salt=1”. At present there are only two letters with stylistic alternates:</p>
+          <div class="row-fluid">
+            <div class="span6">
+              <p><strong>Standard:</strong></p>
+          <sample class="miao">𖼳 𖼴</sample>
+            </div>
+            <div class="span6">
+              <p><strong>Stylistic alternates:</strong></p>
+          <sample class="miao miao-salt">𖼳 𖼴</sample>
+            </div>
+
+            <p>The <strong>aspiration marker</strong> is usually placed at the top right of the letter, as in <span class=miao-small>𖼎𖽐𖽑𖽦𖾑</span>. In the <a href="">Parsons brothers’ research</a>, there is an exception to this rule: letters based on ‘ma’ <span class=miao-small>𖼄</span> and ‘na’ <span class=miao-small>𖼐</span> (that is, nasal consonants) have the aspiration marker on the left. This pattern has been adopted in the Miao Unicode font. If you would like to disable this, however, you can do this using the feature “aspr” (aspiration always on the right).</p>
+          <div class="row-fluid">
+            <div class="span6">
+              <p><strong>Aspiration marker left on nasals:</strong></p>
+          <sample class="miao">𖼄𖽑 𖼐𖽑 𖼤𖽑</sample>
+            </div>
+            <div class="span6">
+              <p><strong>Aspiration marker always on right:</strong></p>
+          <sample class="miao miao-aspr">𖼄𖽑 𖼐𖽑 𖼤𖽑</sample>
+            </div>
+          <p>It is possible to combine these features in LibreOffice by using the & sign. To use all three, type “Miao Unicode:chux=1&salt=1&aspr=1” into the font field.</p>
+
+          <p>For those interested in the kerning currently operational in the Miao Unicode font, the following examples give an illustration. In the present version there are just six kerning classes: a ‘major’ (about -35% of average glyph width) and a ‘minor’ (about -10%) class for inset bottom (‘V’ shape), and the same for inset top (‘A’ shape) and inset middle (‘C’ shape). As mentioned in the <a href="./miao.html#known-issues">Known Issues</a>, the kerning, positioning and spacing require fine-tuning.</p>
           <div class="row-fluid">
             <div class="span6">
               <p><strong>Top Right position:</strong></p>
@@ -776,6 +1021,15 @@
           <sample class="miao">𖼈𖽺 𖼊𖽑𖽔 𖼳𖽘</sample>
             </div>
 
+          <h2>Features for Latin</h2>
+          <p>The Latin-script features shown <a href="./miao.html#small-caps">above</a> are Graphite copies of some of the OpenType features included in Adobe Source Sans Pro. You can enable them in LibreOffice/OpenOffice by using the following codes in the font field:</p>
+          <ul>
+           <li>Miao Unicode:smcp=1 for small caps</li>
+           <li>Miao Unicode:c2sc=1 for all small caps, including numerals and some punctuation</li>
+           <li>Miao Unicode:onum=1 for old-style figures</a>
+          </ul>
+
+          <p>All of the Miao and Latin features can be used in the <a href="./miao.html#try">testing section</a> (if you are using Firefox).</p>
         </section>
 
 
@@ -823,13 +1077,9 @@
           <p>(You do not need to worry about future versions breaking compatibility, however. Documents created using this font will always display correctly with future versions of the font as well, as indeed they should display correctly with any font based on the Unicode implementation instructions.)</p>
           <p>These are some of the issues which I am aware of:</p>
           <ul>
-            <li>The font lacks the stylistic variant for the ‘wart’ (a translated technical term!) in characters like <span class=miao-small>𖼁</span>, <span class=miao-small>𖼅</span>, and <span class=miao-small>𖼾</span>. There should be an option to render this as a dot on the right of the glyph for the Chuxiong orthography, as shown in point 5 <a href=http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3789.pdf#page=2>here (pdf)</a>.</li>
             <li>Various workarounds have been employed to make the finals as legible as possible, including using smaller variants of the finals for above and below position. This has the side effect of giving a slightly inconsistent appearance.</li>
-            <li>Currently a section of the PUA is used for the compressed forms. It would probably be better to re-encode these glyphs without Unicode values and access them in Graphite via post-script names.</li>
-            <li>The spacing is extremely approximate. The side bearings and kerning values all need to be fine-tuned.</li>
-            <li>The outlines of many of the finals are less-than-optimally drawn.</li>
-            <li>Some of the Graphite code seems “precarious”: it works, but doesn’t seem like a satisfying solution. This will probably be re-written gradually as the font is developed.</li>
-            <li>It is built on a compiled version of Adobe Source Sans Pro, rather than on its source. This does not appear to have any adverse effects (all information, including hinting instructions, is retained), but it is clearly not ideal.</li>
+            <li>The spacing, positioning and kerning need to be fine-tuned.</li>
+            <li>It is built on a compiled version of Adobe Source Sans Pro, rather than on its source. This does not appear to have any adverse effects (most information, including hinting instructions, is accurately retained), but it is clearly not ideal.</li>
             <li>For some reason the OpenType style set names are interfering with the copyright field in the font, so that the copyright often displays as “straight l” or “slashed zero” instead of the intended message about the OFL license etc. I have not been able to ascertain why this is happening.</li>
           </ul>
           <p>If you are able to offer advice or assistance with any of the above, please <a href="./miao.html#contact">get in touch</a>.</p>
@@ -844,7 +1094,6 @@
           </div>
           <p>Of the points mentioned under “<a href=./miao.html#known-issues>Known Issues</a>”, I will hopefully be able to tackle the following in the coming months:</p>
 <ul>
-            <li>Create stylistic variants for the Chuxiong ‘wart’.</li>
             <li>Adjust spacing and kerning.</li>
             <li>Redraw some glyphs for smoother and more consistent outlines.</li>
           </ul>
@@ -854,9 +1103,6 @@
           <ul>
             <li>Make a bold version? It is difficult to know how much expansion the finals (vowel signs) could handle.</li>
             <li>Expand the Graphite programming to match more of the Latin-script OpenType features of Source Sans Pro?</li>
-            <li>Create a Miao keyboard layout. (Not “font” development, but important for maximizing the font’s usability.) I intend to create a keyboard for Linux-based systems, and hope that others will be able to make a layout for Mac and Windows.
-            <br>Concerning the exact design of the layout, I do not know whether there are any widespread legacy (that is, not Unicode) solutions which should be emulated, or whether the layout needs to be designed from scratch. It certainly will need to be adjusted according to the feedback of interested users.
-            <br><span class=muted>(I am aware of the legacy solution described <a href=http://www.archives.ecs.soton.ac.uk/miao/WritingMiao/WritingMiao.htm#template>here</a>, but I do not know how widely used it is. There apparently have been <a href=http://www.ubs-translations.org/fileadmin/publications/tbt/practical/BT-62-4-2011-Yu.pdf#page=5>other legacy solutions (<em>link to pdf</em>)</a> using Keyman software, but to my knowledge none were publicly released.)</span></li>
           </ul>
           <p>Again, I would be <a href="./miao.html#contact">happy to hear from you</a> if you are interested in collaborating.</p>
         </section>
@@ -873,7 +1119,6 @@
         </section>
 
 
-
       </div>
     </div>
 
@@ -885,7 +1130,7 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p>Last updated 8 May 2013.</p>
+        <p>Updated 29 May 2013.</p>
         <p>By Philip Reimer, built with <a href=http://twitter.github.io/bootstrap/>Twitter Bootstrap</a> (<a href=http://www.apache.org/licenses/LICENSE-2.0>Apache 2.0 license</a>).</p>
         <p>Miao Unicode font licensed under the <a href=http://scripts.sil.org/OFL>SIL OFL</a>; documentation under <a href=http://creativecommons.org/licenses/by-sa/3.0/>CC-BY-SA</a>.</p>
       </div>
@@ -896,8 +1141,9 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
     <script src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
@@ -916,6 +1162,69 @@
     <script src="assets/js/google-code-prettify/prettify.js"></script>
 
     <script src="assets/js/application.js"></script>
+
+  <!-- add checkboxes for latin overlay on keyboard layout image and Graphite features -->
+    <script type="text/javascript">
+     $(window).load(function(){
+
+      $('#kb-latin').change(function() {
+       $('#kb-over').toggle(this.checked);
+      });
+
+        $("#feat-table").hide();
+        $("#feat-table-show").show();
+ 
+    $('#feat-table-show').click(function(){
+    $("#feat-table").slideToggle();
+    });
+
+
+      $("#none").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-smcp miao-onum miao-chux miao-salt miao-aspr miao-malf miao-lalf")
+      });
+    
+      $("#smcp").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-onum miao-chux miao-salt miao-aspr miao-malf miao-lalf")
+                      .addClass("miao-smcp");
+      });
+
+      $("#c2sc").click(function(){
+       $("#interact") .removeClass("miao-smcp miao-onum miao-chux miao-salt miao-aspr miao-malf miao-lalf")
+                      .addClass("miao-c2sc");
+      });
+
+      $("#onum").click(function(){
+       $("#interact") .removeClass("miao-smcp miao-c2sc miao-chux miao-salt miao-aspr miao-malf miao-lalf")
+                      .addClass("miao-onum");
+      });
+
+      $("#lalf").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-smcp miao-onum miao-chux miao-salt miao-aspr miao-malf")
+                      .addClass("miao-lalf");
+      });
+
+      $("#chux").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-smcp miao-onum miao-salt miao-aspr miao-malf miao-lalf")
+                      .addClass("miao-chux");
+      });
+
+      $("#salt").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-smcp miao-onum miao-chux miao-aspr miao-malf miao-lalf")
+                      .addClass("miao-salt");
+      });
+
+      $("#aspr").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-smcp miao-onum miao-chux miao-salt miao-malf miao-lalf")
+                      .addClass("miao-aspr");
+      });
+
+      $("#malf").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-smcp miao-onum miao-chux miao-salt miao-aspr miao-lalf")
+                      .addClass("miao-malf");
+      });
+
+     });
+    </script>
 
 <script type="text/javascript">
 var sc_project=8942207; 

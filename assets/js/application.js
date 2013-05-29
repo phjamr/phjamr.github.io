@@ -35,12 +35,13 @@
     // make code pretty
     window.prettyPrint && prettyPrint()
 
+// CHANGED: removed checkbox code
     // add-ons
-    $('.add-on :checkbox').on('click', function () {
-      var $this = $(this)
-        , method = $this.attr('checked') ? 'addClass' : 'removeClass'
-      $(this).parents('.add-on')[method]('active')
-    })
+//    $('.add-on :checkbox').on('click', function () {
+//      var $this = $(this)
+//       , method = $this.attr('checked') ? 'addClass' : 'removeClass'
+//      $(this).parents('.add-on')[method]('active')
+//    })
 
     // add tipsies to grid for scaffolding
     if ($('#gridSystem').length) {
