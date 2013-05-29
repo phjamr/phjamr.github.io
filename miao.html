@@ -876,7 +876,7 @@
           <p>Open a terminal. You can do this by holding down ‘ctrl’ and ‘alt’ and pressing ‘t’.</p>
           <p>In the terminal, copy and paste this line.
           <br><span class="muted em">Note that in the terminal you have to add ‘shift’ in order to paste: ctrl + shift + v. You can also use the menu to select Edit > Paste.</span></p>
-          <pre>sudo cp ~/Downloads/mro /usr/share/X11/xkb/symbols/mro</pre>
+          <pre>sudo cp ~/Downloads/miao /usr/share/X11/xkb/symbols/miao</pre>
           <p>The terminal will now ask for your password. Type it and press enter.
           <br><span class="muted em">Note that the terminal does not display dots or stars while you type your password, so it might look like it’s not working. Don’t worry, it is working.</span></p>
           <p>When you have typed the password it will now go onto a new line. That means it has successfully copied the file from your Downloads folder to the place where the computer can use it.</p>
@@ -886,7 +886,7 @@
           <p>You must now restart your computer before the keyboard can be used.</p>
           <p>When you have restarted, go the “Keyboard Layout” menu. You can find it in the system settings, or on the top panel under the keyboard icon.</p>
           <p>Click the ‘+’ button. <br><span class="muted em">If you have four keyboard layouts already then this button will be inactive and you will need to remove one keyboard before you can add another.</span></p>
-          <p>You can find the Miao keyboard either by simply typing ‘Miao’, or by typing ‘China’ this is the primary countries where it is used.</p>
+          <p>You can find the Miao keyboard either by simply typing ‘Miao’, or by typing ‘China’ as this is the primary country where it is used.</p>
           <p>Click ‘add’. Your keyboard is now ready to use!</p>
             <h2>The layout</h2>
           <p>The keyboard layout is as follows:</p>
@@ -924,7 +924,7 @@
 
           <h2>Advanced information</h2>
           <p>Further details about keyboard layouts in Linux can be found at <a href=http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11>Daniel Paul O’Donnell’s blog</a> and the <a href=https://help.ubuntu.com/community/Howto%3A%20Custom%20keyboard%20layout%20definitions>Ubuntu documentation</a>. The following is a brief summary based on these resources.</p>
-          <p>If you would like to have more control over the keyboard installation, you need to copy the ‘mro’ file into the layouts folder (in Ubuntu this is /usr/share/x11/xkb/symbols), and then edit the layout list so that the file can be recognized. In Ubuntu this file is evdev.xml, in /usr/share/x11/xkb/rules.</p>
+          <p>If you would like to have more control over the keyboard installation, you need to copy the ‘miao’ file into the layouts folder (in Ubuntu this is /usr/share/x11/xkb/symbols), and then edit the layout list so that the file can be recognized. In Ubuntu this file is evdev.xml, in /usr/share/x11/xkb/rules.</p>
           <p>The body of this file is the <span class="pre"><layoutList></span>. You can add the Miao entry anywhere in this section. I added it at the end, just before the <span class="pre"></layoutList></span> end marker.</p>
           <p>The code needs to include information about the file name, script code, and the relevant languages and countries, as shown below:</p>
             <pre class="prettyprint linenums">

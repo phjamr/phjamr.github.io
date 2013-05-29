@@ -344,10 +344,12 @@
           <div class="page-header">
             <h1>Keyboard for Linux</h1>
           </div>
-          <p>I have developed a Mro keyboard for Linux systems. I do not intend to create keyboard layouts for Mac or Windows, but I would encourage others to build on my work to do so.</p>
+          <p>I have developed a Mro keyboard layout for Linux systems. I do not intend to create keyboard layouts for Mac or Windows, but I would encourage others to build on my work to do so.</p>
+          <p>If you do not use Linux but you need to use the keyboard layout, remember that there are various options for installing a Linux operating system alongside your current one (for example, see <a href=http://www.ubuntu.com/download/desktop/windows-installer>Ubuntu Windows installer</a> and <a href=https://help.ubuntu.com/community/WindowsDualBoot)>Ubuntu dual boot</a>). </p>
           <p>The Mro layout very roughly corresponds to the sounds of the Latin letters on the qwerty keyboard.</p>
+          <p>Please <a href="./miao.html#contact">contact me (or file an issue on Github)</a> if you have a suggestion for how to improve the keyboard layout.</p>
           <p>It has been tested to work on <a href="http://www.ubuntu.com/">Ubuntu</a>, and the “easy method” installation instructions are specifically for Ubuntu.</p>
-          <p>The keyboard should work properly on other distributions (e.g. <a href="http://www.linuxmint.com/">Linux Mint</a>, <a href="http://fedoraproject.org/">Fedora</a>, and the <a href="http://www.ubuntu.com/about/about-ubuntu/derivatives">Ubuntu derivatives</a>), but the files may need to be placed in different directories.</p>
+          <p>The keyboard should work properly on other distributions (e.g. <a href="http://www.linuxmint.com/">Linux Mint</a>, <a href="http://fedoraproject.org/">Fedora</a>, and the <a href="http://www.ubuntu.com/about/about-ubuntu/derivatives">Ubuntu derivatives</a>), but the files may need to be placed in different locations.</p>
             <h2>Easy installation method</h2>
           <p>Save these two files in your “Downloads” folder:
           <br><span class="muted em">right-click and choose “save link as”</span></p>
@@ -360,28 +362,39 @@
           <br><span class="muted em">Note that in the terminal you have to add ‘shift’ in order to paste: ctrl + shift + v. You can also use the menu to select Edit > Paste.</span></p>
           <pre>sudo cp ~/Downloads/mro /usr/share/X11/xkb/symbols/mro</pre>
           <p>The terminal will now ask for your password. Type it and press enter.
-          <br><span class="muted em">Note that the terminal does not display dots or stars while you type your password, so it looks like it’s not working. Don’t worry, it is normal.</span></p>
+          <br><span class="muted em">Note that the terminal does not display dots or stars while you type your password, so it might look like it’s not working. Don’t worry, it is working.</span></p>
           <p>When you have typed the password it will now go onto a new line. That means it has successfully copied the file from your Downloads folder to the place where the computer can use it.</p>
           <p>You now need to do the same for the second file. Copy this line into the terminal:</p>
           <pre>sudo cp ~/Downloads/evdev.xml /usr/share/X11/xkb/rules/evdev.xml</pre>
           <p>This time it should not ask for your password because you just typed it a minute ago.</p>
-          <p>You now must restart your computer before the keyboard can be used.</p>
+          <p>You must now restart your computer before the keyboard can be used.</p>
           <p>When you have restarted, go the “Keyboard Layout” menu. You can find it in the system settings, or on the top panel under the keyboard icon.</p>
-          <p>Click the ‘+’ button. (If you have four keyboard layouts already then this button will be inactive and you will need to remove one keyboard before you can add another.)</p>
-          <p>You can find the Mro keyboard either by simply typing ‘Mro’, or by typing ‘Bangladesh’ or ‘Myanmar’ as these are the countries where it is used.</p>
+          <p>Click the ‘+’ button. <br><span class="muted em">If you have four keyboard layouts already then this button will be inactive and you will need to remove one keyboard before you can add another.</span></p>
+          <p>You can find the Miao keyboard either by simply typing ‘Mro’, or by typing ‘Bangladesh’ or ‘Myanmar’ as these are the primary countries where it is used.</p>
           <p>Click ‘add’. Your keyboard is now ready to use!</p>
-
             <h2>The layout</h2>
           <p>The keyboard layout is as follows:</p>
-          <p><img src="http://twolite.sudalyph.org/public/images/Miao_Path.svgz"
-              alt="Mro keyboard layout" title="Mro keyboard layout" style="width:100%;"></p>
-          <p>Alt for right hand column letters</p>
 
-            <h2>Advanced details</h2>
-          <p>Further information about keyboard layouts in Linux can be found at <a href=http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11>Daniel Paul O’Donnell’s blog</a> and the <a href=https://help.ubuntu.com/community/Howto%3A%20Custom%20keyboard%20layout%20definitions>Ubuntu documentation</a>. The following is a brief summary based on these resources.</p>
-          <p>If you would like to have more control over the keyboard installation, you need to copy the ‘mro’ file into the layouts folder (in Ubuntu 8.10 and higher this is /usr/share/x11/xkb/symbols), and edit the layout list so that the file can be recognized. In Ubuntu this file is evdev.xml, in /usr/share/x11/xkb/rules.</p>
+         <p><img src="./assets/img/mro.svg" 
+              alt="Mro keyboard layout" title="Mro keyboard layout" style="width:100%;"></p>
+
+          <p>Each key has four possible options:</p>
+          <ol>
+             <li><span class="strong">Normal:</span> bottom left hand corner, black</li>
+             <li><span class="strong">Shift:</span> top left hand corner, grey</li>
+             <li><span class="strong">Alt (right):</span> bottom right hand corner, blue</li>
+             <li><span class="strong">Alt (right) and shift:</span> top right hand corner, light blue</li>
+          </ol>
+          <p>Many keys do not have a shift option as the Mro script is compact enough to not require this.</p>
+          <p>Bengali numerals are given (with alt-right + shift) in addition to Mro and western numerals.</p>
+          <p>The qwerty keyboard can be accessed by holding the alt (right) key when typing.</p>
+
+
+          <h2>Advanced information</h2>
+          <p>Further details about keyboard layouts in Linux can be found at <a href=http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11>Daniel Paul O’Donnell’s blog</a> and the <a href=https://help.ubuntu.com/community/Howto%3A%20Custom%20keyboard%20layout%20definitions>Ubuntu documentation</a>. The following is a brief summary based on these resources.</p>
+          <p>If you would like to have more control over the keyboard installation, you need to copy the ‘mro’ file into the layouts folder (in Ubuntu this is /usr/share/x11/xkb/symbols), and then edit the layout list so that the file can be recognized. In Ubuntu this file is evdev.xml, in /usr/share/x11/xkb/rules.</p>
           <p>The body of this file is the <span class="pre"><layoutList></span>. You can add the Mro entry anywhere in this section. I added it at the end, just before the <span class="pre"></layoutList></span> end marker.</p>
-          <p>The code needs to include information about the file name, script code, and the relevant languages and countries.</p>
+          <p>The code needs to include information about the file name, script code, and the relevant languages and countries, as shown below:</p>
             <pre class="prettyprint linenums">
     &lt;layout&gt;
       &lt;configItem&gt;
@@ -390,17 +403,24 @@
         &lt;description&gt;Mro&lt;/description&gt;
         &lt;countryList&gt;
           &lt;iso3166Id&gt;BD&lt;/iso3166Id&gt;
-          &lt;iso3166Id&gt;MM&lt;/iso3166Id&gt;
+          &lt;iso3166Id&gt;MY&lt;/iso3166Id&gt;
         &lt;/countryList&gt;
         &lt;languageList&gt;
           &lt;iso639Id&gt;mro&lt;/iso639Id&gt;
         &lt;/languageList&gt;
       &lt;/configItem&gt;
     &lt;/layout&gt;</pre>
-          <p>The xkb system is very straightforward.</p>
-          <p>The keyboard layout is licensed under the MIT License so that it can be easily modified and distributed.</p>
-        </section>
 
+          <p>The iso3166 country codes can be found on <a href="https://en.wikipedia.org/wiki/ISO_3166-1">Wikipedia</a>, and the iso639 language codes can be found at <a href="http://www.ethnologue.com/">Ethnologue</a>.</p>
+          <p>If you would like to customize the keyboard in some way, the xkb system makes this very easy.</p>
+          <p>Here is an example of one line from the keyboard layout:</p>
+            <pre class="prettyprint linenums">
+key &lt;AE04&gt; { [ 0x1016A64,       U09F3,    4,    U09EA ] } ;</pre>
+          <p>This shows the four characters availabed under the key <AE04> (the number 4): the first one shows normal, the second +shift, the third +alt (right), and the fourth +alt+shift.</p>
+          <p>If you wanted, for example, to have the dollar sign instead of the Bengali Rupee sign, you could replace U09EA with “dollar”.</p>
+          <p>The Mro characters require 0x10 before the Unicode hex value as they are in the Supplementary Multilingual Plane (not the Basic).</p>
+          <p>There do not seem to be any conventions regarding licensing for keyboard layouts as they are usually packaged with other software. For the sake of clarity, this keyboard layout is licensed under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a> so that it can be easily modified and distributed.</p>
+        </section>
 
 
 
@@ -413,7 +433,7 @@
           <p>While Mro Unicode is fully functional for use, it is still in a phase of testing and development.
           <p>These are some of the issues which I am aware of:</p>
           <ul>
-            <li>The spacing is poor: the side bearings need to be fine-tuned, and kerning pairs/classes need to be added.</li>
+            <li>The spacing could be improved: the side bearings need to be fine-tuned, and kerning pairs/classes need to be added.</li>
             <li>The outlines of some of the glyphs are less-than-optimally drawn.</li>
             <li>It is built on a compiled version of Adobe Source Sans Pro, rather than on its source. This does not appear to have any adverse effects (most information, including hinting instructions, is accurately retained), but it is clearly not ideal.</li>
             <li>For some reason the OpenType style set names are interfering with the copyright field in the font, so that the copyright often displays as “straight l” or “slashed zero” instead of the intended message about the OFL license etc. I have not been able to ascertain why this is happening.</li>
@@ -438,8 +458,6 @@
 
           <ul>
             <li>Make a bold version?</li>
-            <li>Create a Mro keyboard layout. (Not “font” development, but important for maximizing the font’s usability.) I intend to create a keyboard for Linux-based systems, and hope that others will be able to make a layout for Mac and Windows.
-            <br>Concerning the exact design of the layout, I do not know whether there are any legacy (that is, not Unicode) solutions which should be emulated, or whether the layout needs to be designed from scratch. It certainly will need to be adjusted according to the feedback of interested users.</li>
           </ul>
           <p>Again, I would be <a href="./mro.html#contact">happy to hear from you</a> if you are interested in collaborating.</p>
         </section>
