@@ -19,7 +19,7 @@
 
     <!-- override css for input text style to make it Mro font -->
     <style type="text/css"> 
-      input {
+      input, textarea {
        font-family: 'mro unicode', sans-serif;
       }
 /* not necessary to change default table font - class set in tr
@@ -182,11 +182,15 @@
 
     <p>Experiment with the Mro Unicode font by copying and pasting from the charts below into this box.</p>
 
+<!--
 <form>
   <fieldset>
     <input type="text" placeholder="𖩔𖩆𖩁 𖩍𖩑𖩁 …">
   </fieldset>
 </form>
+-->
+
+   <textarea id="interact" rows="2" placeholder="𖩔𖩆𖩁 𖩍𖩑𖩁 …"></textarea>
 
 <p>The following charts give a summary of the proposed Mro Unicode block.</p>
 <p><strong>Alphabet:</strong></p>
@@ -331,9 +335,12 @@
             <h1>Download & install</h1>
           </div>
 
-          <p>Download from the <a href=https://github.com/phjamr/MroUnicode/blob/master/MroUnicode-Regular.ttf>github page</a>. Click ‘view raw’ and save to a location of your choice.</p>
-          <p>The install procedure varies according to your system. Most modern operating systems will have an “install” button on the window when you open the font.</p>
-          <p>In Windows XP you need to copy the file into the C: > Windows > Fonts directory.</p>
+          <p>Download the font file from the <a href=https://github.com/phjamr/MroUnicode/blob/master/MroUnicode-Regular.ttf>github page</a>. Click ‘view raw’ and save to a location of your choice.</p>
+          <p>The install procedure varies according to your system. Most modern operating systems have an “install” button on the window that appears when you open the font. Click the install button.</p>
+          <p>In Windows XP you need to copy the file into the C:\Windows\Fonts directory.</p>
+          <p>(If you need more help with the font installation, there are a number of websites which give instructions. See for example <a href=http://www.adobe.com/products/type/install-instructions.html>Adobe’s page</a> on installing fonts in Windows and Mac.</p>
+          <p>After installing, check that it’s working by restarting your browser and going to <a href=https://raw.github.com/phjamr/MroUnicode/master/Mro_Test>this test page</a>. If all of the characters display – not as boxes or question marks – then the font has probably installed correctly.</li>
+
         </section>
 
 

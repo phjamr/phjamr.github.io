@@ -399,7 +399,7 @@
 </form>
 -->
 
-   <textarea id="interact" rows="2" placeholder="𖼊𖽺𖾐 𖼣𖽔 𖼊𖽱𖾐 𖼽𖽔𖾑 𖼄𖽻 𖼎𖽐𖽑𖽦𖾑 𖼀𖽱𖾐 𖼐𖽻𖾏 …"></textarea>
+    <textarea id="interact" rows="2" placeholder="𖼊𖽺𖾐 𖼣𖽔 𖼊𖽱𖾐 𖼽𖽔𖾑 𖼄𖽻 𖼎𖽐𖽑𖽦𖾑 𖼀𖽱𖾐 𖼐𖽻𖾏 …"></textarea>
 
    <label id="feat-table-show" class="muted" style="margin-top:6px">[show/hide feature table]</label>
    
