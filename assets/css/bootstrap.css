@@ -62,7 +62,7 @@
 .miao-c2sc {
   font-family: "Miao Unicode", sans-serif;
   letter-spacing:0.5px;
-  -moz-font-feature-settings: "c2sc";
+  -moz-font-feature-settings: "c2sc", "smcp";
 }
 
 .miao-chux {

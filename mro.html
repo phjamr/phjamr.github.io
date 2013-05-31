@@ -64,6 +64,9 @@
               <li class="">
                 <a href="./miao.html">Miao (Pollard)</a>
               </li>
+              <li class="">
+                <a href="./lisu.html">Lisu (Fraser)</a>
+              </li>
               <li class="active">
                 <a href="./mro.html">Mro</a>
               </li>
@@ -138,8 +141,8 @@
           <div class="page-header">
             <h1>The Mro script</h1>
           </div>
-          <p>Section coming soon.</p>
           <p>The Mro script is used by the Mro (sometimes “Mru”) people of the Chittagong Hill Tracts in southeastern Bangladesh. It was invented by a member of the community in the 1980s, and apparently the majority of the community are now literate in it.</p>
+          <p>Different figures are given for the number of speakers of the <a href="http://en.wikipedia.org/wiki/Mru_language">Mro (Mru) language</a>. There are probably between 50 000 and 100 000.</p>
           <p><em>This information is condensed from the following sources:</em></p>
 <ul>
             <li><a href=http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3589.pdf>Primary Unicode Proposal, 27 October 2009 (pdf)</a>: provides extensive background information on the script’s history and use.</li>
@@ -339,7 +342,7 @@
           <p>The install procedure varies according to your system. Most modern operating systems have an “install” button on the window that appears when you open the font. Click the install button.</p>
           <p>In Windows XP you need to copy the file into the C:\Windows\Fonts directory.</p>
           <p>(If you need more help with the font installation, there are a number of websites which give instructions. See for example <a href=http://www.adobe.com/products/type/install-instructions.html>Adobe’s page</a> on installing fonts in Windows and Mac.</p>
-          <p>After installing, check that it’s working by restarting your browser and going to <a href=https://raw.github.com/phjamr/MroUnicode/master/Mro_Test>this test page</a>. If all of the characters display – not as boxes or question marks – then the font has probably installed correctly.</li>
+          <p>After installing, check that it’s working by restarting your browser and going to <a href=https://raw.github.com/phjamr/MroUnicode/master/Mro_Test>this test page</a>. If all of the characters display — not as boxes or question marks — then the font has probably installed correctly.</li>
 
         </section>
 
@@ -424,7 +427,7 @@
             <pre class="prettyprint linenums">
 key &lt;AE04&gt; { [ 0x1016A64,       U09F3,    4,    U09EA ] } ;</pre>
           <p>This shows the four characters availabed under the key <AE04> (the number 4): the first one shows normal, the second +shift, the third +alt (right), and the fourth +alt+shift.</p>
-          <p>If you wanted, for example, to have the dollar sign instead of the Bengali Rupee sign, you could replace U09EA with “dollar”.</p>
+          <p>If you wanted, for example, to have the dollar sign instead of the Bengali Rupee sign, you could replace U09F3 with “dollar”.</p>
           <p>The Mro characters require 0x10 before the Unicode hex value as they are in the Supplementary Multilingual Plane (not the Basic).</p>
           <p>There do not seem to be any conventions regarding licensing for keyboard layouts as they are usually packaged with other software. For the sake of clarity, this keyboard layout is licensed under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a> so that it can be easily modified and distributed.</p>
         </section>
@@ -493,7 +496,7 @@ key &lt;AE04&gt; { [ 0x1016A64,       U09F3,    4,    U09EA ] } ;</pre>
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p>Last updated 8 May 2013.</p>
+        <p>Last updated 31 May 2013.</p>
         <p>By Philip Reimer, built with <a href=http://twitter.github.io/bootstrap/>Twitter Bootstrap</a> (<a href=http://www.apache.org/licenses/LICENSE-2.0>Apache 2.0 license</a>).</p>
         <p>Mro Unicode font licensed under the <a href=http://scripts.sil.org/OFL>SIL OFL</a>; documentation under <a href=http://creativecommons.org/licenses/by-sa/3.0/>CC-BY-SA</a>.</p>
       </div>

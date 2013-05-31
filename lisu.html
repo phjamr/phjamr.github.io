@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lisu Unicode: documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Miao Unicode font">
+    <meta name="author" content="Phjamr">
+
+    <script src="http://use.edgefonts.net/source-sans-pro:n4:all.js"></script> <!-- source sans regular complete -->
+    <script src="http://use.edgefonts.net/source-sans-pro:n3,i4,n7.js"></script> <!-- other weights subset -->
+    <script src="http://use.edgefonts.net/source-code-pro:n4.js"></script> <!-- source sans mono ("code") -->
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- override css for input text style to make it Miao font -->
+    <style type="text/css"> 
+      textarea, input {
+       font-family: 'miao unicode', sans-serif;
+      }
+
+  .feat-table {
+    width: 100%;
+    display: none;
+}
+
+  .kb-cont {
+    width: 100%;
+    height: auto;
+    padding-top: 33%;
+    position: relative;
+}
+
+  .kb-base, 
+  .kb-over {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+  .kb-over {
+    z-index: 10;
+/*    display: none; */
+}
+
+/* not necessary to change default table font - class set in tr
+      .table-condensed td {
+       font-family: 'miao unicode', sans-serif;
+       -moz-font-feature-settings: "onum";
+      }
+*/
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+    
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="">
+                <a href="./miao.html">Miao (Pollard)</a>
+              </li>
+              <li class="active">
+                <a href="./lisu.html">Lisu (Fraser)</a>
+              </li>
+              <li class="">
+                <a href="./mro.html">Mro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="container">
+
+    <!-- Sidebar nav
+    ================================================== -->
+    <div class="row-fluid">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#lisu-script">Lisu (Fraser) script</a></li>
+          <li><a href="#samples">Text samples</a></li>
+          <li><a href="#input">Text input (interactive)</a></li>
+          <li><a href="#install">Download & install</a></li>
+          <li><a href="#keyboard">Keyboard for Linux</a></li>
+          <li><a href="#known-issues">Known issues</a></li>
+          <li><a href="#road-map">Road map</a></li>
+          <li><a href="#contact">Contact</a></li>
+<!-- changed: example with chevron left in          <li><a href="#road-map"><i class="icon-chevron-right"></i> Road map</a></li> -->
+        </ul>
+      </div>
+
+
+      <div class="span9">
+
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+<!--original, makes the page too wide <div class="container"> -->
+    <h1>Lisu Unicode</h1>
+    <p>Open source font for users of the Lisu script</p>
+<!--  </div> -->
+</header>
+
+
+        <!-- Intro
+        ================================================== -->
+        <section id="intro">
+          <div class="page-header">
+            <h1>Introduction</h1>
+          </div>
+          <p>Lisu Unicode is an open-source font which supports the Lisu, or ‘Fraser’, script.</p>
+          <p>Though other unicode fonts exist for Lisu (e.g. <a href="https://code.google.com/p/noto/wiki/NotoSansLisu">Noto</a> and <a href="http://www.alanwood.net/unicode/fonts-east-asian.html#lisu">Lisu Tzimu</a>), it seemed worthwhile to create a Lisu equivalent for <a href="./miao.html">Miao Unicode</a> given the association between the two scripts.</p>
+          <p>The design is based on Adobe’s <a href=http://sourceforge.net/projects/sourcesans.adobe/>Source Sans Pro</a>.</p>
+          <p>Both Lisu Unicode and Adobe Source Sans Pro are licensed under SIL’s Open Font License, which means that they are available free of charge, and access is provided to the source files. Details of the license are given on <a href=http://scripts.sil.org/OFL>SIL’s OFL page</a>. </p>
+        </section>
+
+
+        <!-- Lisu script
+        ================================================== -->
+        <section id="lisu-script">
+          <div class="page-header">
+            <h1>The Lisu (Fraser) script</h1>
+          </div>
+          <p>The Lisu script was invented around 1914 by a <a href="http://en.wikipedia.org/wiki/Karen_people">Karen</a> man from Burma called Sara Ba Thaw, <a href="http://images.library.yale.edu/divinitycontent/dayrep/Burma%20Baptist%20Missionary%20Convention%201928-1929%20v64.pdf#page=22">who was working</a> as a Christian evangelist among the <a href="http://en.wikipedia.org/wiki/Lisu_people">Lisu people</a> in Yunnan province, China. The Scottish missionary James Fraser subsequently modified the script.</p>
+          <p>Their design used Latin capital letters, and rotated versions of them for variations (for example <span class="miao-small">ꓣ</span> ‘zha’ and <span class="miao-small">ꓤ</span> ‘za’). There are also six symbols based on Latin punctuation marks which represent tones.</p>
+          <p>The Lisu (Fraser) script was recognized as an official script for the Lisu language by the Chinese government in 1992. The Unicode Standard officially encoded Lisu in version 5.2.0, October 2009.</p>
+          <p>In addition to “Lisu” and “Fraser”, the script is sometimes also referred to as “Old Lisu”. This is the same script, not an older version.</p>
+          <p>The Lisu script is used primarily by speakers of the <a href="http://en.wikipedia.org/wiki/Lisu_language">Lisu language</a> — according to the <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3317.pdf">Unicode proposal</a> about 200,000 people are active users of the script, out of a total 630,000 Lisu speakers. (In addition to Yunnan province, Lisu is also spoken in Arunachal Pradesh (NE India), Myanmar, and Thailand.) It appears that the <a href="http://en.wikipedia.org/wiki/Lipo_language">Lipo language</a> was at some point written in the Lisu script, but is not any longer.</p>
+
+          <p><em>This information is condensed from the following sources:</em></p>
+<ul>
+            <li><a href=http://www.unicode.org/versions/Unicode6.2.0/ch13.pdf#page=26>Official Unicode description (pdf)</a>: brief write-up and discussion of how to implement the Unicode encoding (bottom of p.461)</li>
+            <li><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3317.pdf">Unicode proposal (2007)</a>: description of the script with rationale for Unicode encoding method, history and use, and extended text samples
+            <li><a href=http://scriptsource.org/scr/Lisu>Script Source</a>: description of history and use, with text samples</li>
+            <li><a href=http://www.omniglot.com/writing/fraser.htm>Omniglot</a>: description of history and use, with text samples; includes IPA</li>
+            <li><a href=http://en.wikipedia.org/wiki/Fraser_alphabet>Wikipedia</a>: description of history and use, with text samples</li>
+          </ul>
+
+        </section>
+
+
+
+
+
+        <!-- Samples
+        ================================================== -->
+        <section id="samples">
+          <div class="page-header">
+            <h1>Samples</h1>
+          </div>
+          <p>Comparison of existing scanned images with the equivalent in the Lisu Unicode font.</p>
+
+          <div class="row-fluid">
+            <div class="span6">
+              <strong><p>Lisu Unicode rendering</strong></p>
+              <p>Coming soon.</p>
+            </div>
+            <div class="span6">
+              <strong><p>Original image</strong></p>
+              <p>Coming soon.</p>
+            </div>
+          </div>
+        </section>
+
+
+
+
+        <!-- Text input
+        ================================================== -->
+        <section id="input">
+          <div class="page-header">
+            <h1>Text input (interactive)</h1>
+          </div>
+
+
+    <p>Experiment with the Lisu Unicode font by copying and pasting from the charts below into this box.</p>
+
+   <textarea id="interact" rows="2" placeholder="ꓛꓹ-ꓛꓹ ꓕꓲ ꓣꓳ ꓡꓳꓸ ꓐꓲˍ ꓟ ꓐꓰ  …"></textarea>
+
+   <label id="feat-table-show" class="muted" style="margin-top:6px">[show/hide feature table]</label>
+   
+   <div class="feat-table" id="feat-table">
+
+    <p class="em">These are Graphite features which allow you to select different styles. The following features work for both the Latin and Lisu scripts. (Small capitals for the Lisu script may come in useful, for example, when typing just one Lisu word on an otherwise Latin page in order to make it blend in more harmoniously.)</p>
+    <p class="em">The only browser which can display these features is Firefox, with Graphite enabled. For further explanation, see the “<a href="./miao.html#graphite-firefox">Graphite in Firefox</a>” and “<a href="./miao.html#graphite-features">Graphite features</a>” sections of the Miao Unicode page.</p>
+    <table class="table table-bordered table-condensed">
+      <tr>
+        <td>
+          <label class="radio">
+             <input type="radio" id="none" name="feat" value="none" checked="checked">
+             none
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="smcp" name="feat" value="smcp">
+             small caps
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="c2sc" name="feat" value="c2sc">
+             all small caps
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="onum" name="feat" value="onum">
+             old-style figures
+          </label>
+        </td>
+        <td>
+          <label class="radio">
+             <input type="radio" id="lalf" name="feat" value="lalf">
+             smcp & onum
+          </label>
+        </td>
+      </tr>
+    </table>
+
+    </div>
+
+<p>The following charts give a summary of the Lisu Unicode block according to character type. The Unicode transcriptions are given here; for IPA see the <a href=http://www.omniglot.com/writing/fraser.htm>Lisu (Fraser) Omniglot page.</a></p>
+
+<p><strong>Consonants:</strong></p>
+<table class="table table-striped table-bordered table-condensed">
+ <tr class="miao"> <!-- Lisu Cons 1 -->
+<td>ꓐ</td>
+<td>ꓑ</td>
+<td>ꓒ</td>
+<td>ꓓ</td>
+<td>ꓔ</td>
+<td>ꓕ</td>
+<td>ꓨ</td>
+<td>ꓗ</td>
+<td>ꓘ</td>
+ </tr>
+
+ <tr class="muted"> <!-- Translit 1 -->
+<td>ba</td>
+<td>pa</td>
+<td>pha</td>
+<td>da</td>
+<td>ta</td>
+<td>tha</td>
+<td>ga</td>
+<td>kha</td>
+<td>ka</td>
+ </tr>
+
+ <tr class="miao"> <!-- Lisu Cons 2 -->
+<td>ꓙ</td>
+<td>ꓚ</td>
+<td>ꓛ</td>
+<td>ꓜ</td>
+<td>ꓝ</td>
+<td>ꓞ</td>
+<td>ꓟ</td>
+<td>ꓠ</td>
+<td>ꓡ</td>
+ </tr>
+ 
+ <tr class="muted"> <!-- Translit 2 -->
+<td>ja</td>
+<td>ca</td>
+<td>cha</td>
+<td>dza</td>
+<td>tsa</td>
+<td>tsha</td>
+<td>ma</td>
+<td>na</td>
+<td>la</td>
+ </tr>
+
+ <tr class="miao"> <!-- Lisu Cons 3 -->
+<td>ꓢ</td>
+<td>ꓣ</td>
+<td>ꓤ</td>
+<td>ꓥ</td>
+<td>ꓦ</td>
+<td>ꓧ</td>
+<td>ꓨ</td>
+<td>ꓩ</td>
+<td>ꓪ</td>
+ </tr>
+
+ <tr class="muted"> <!-- Translit 3 -->
+<td>sa</td>
+<td>zha</td>
+<td>za</td>
+<td>nga</td>
+<td>ha</td>
+<td>xa</td>
+<td>hha</td>
+<td>fa</td>
+<td>wa</td>
+ </tr>
+
+ <tr class="miao"> <!-- Lisu Cons 4 -->
+<td>ꓫ</td>
+<td>ꓬ</td>
+<td>ꓭ</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+ </tr>
+
+ <tr class="muted"> <!-- Translit 4 -->
+<td>sha</td>
+<td>zzha</td>
+<td>nya</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+ </tr>
+</table>
+
+<p><strong>Vowels:</strong></p>
+<table class="table table-striped table-bordered table-condensed">
+ <tr class="miao"> <!-- Lisu Vowels -->
+<td>ꓮ</td>
+<td>ꓯ</td>
+<td>ꓰ</td>
+<td>ꓱ</td>
+<td>ꓲ</td>
+<td>ꓳ</td>
+<td>ꓴ</td>
+<td>ꓵ</td>
+<td>ꓶ</td>
+<td>ꓷ</td>
+ </tr>
+
+ <tr class="muted"> <!-- Translit 5 -->
+<td>a</td>
+<td>ae</td>
+<td>e</td>
+<td>eu</td>
+<td>i</td>
+<td>o</td>
+<td>u</td>
+<td>ue</td>
+<td>uh</td>
+<td>oe</td>
+ </tr>
+</table>
+
+<p><strong>Tones:</strong></p>
+<table class="table table-striped table-bordered table-condensed">
+ <tr class="miao"> <!-- Tones -->
+<td>ꓸ</td>
+<td>ꓹ</td>
+<td>ꓺ</td>
+<td>ꓻ</td>
+<td>ꓼ</td>
+<td>ꓽ</td>
+ </tr>
+
+ <tr class="muted"> <!-- Translit -->
+<td>top</td>
+<td>rising</td>
+<td>high</td>
+<td>mid</td>
+<td>high falling</td>
+<td>mid falling</td>
+ </tr>
+</table>
+
+<p><strong>Modifiers & punctuation:</strong></p>
+<table class="table table-striped table-bordered table-condensed">
+ <tr class="miao"> <!-- Lisu Mod & punct -->
+<td>ˍ</td>
+<td>ʼ</td>
+<td>꓾</td>
+<td>꓿</td>
+ </tr>
+
+ <tr class="muted"> <!-- Translit -->
+<td>‘a’ glide </td>
+<td>nasalized vowel</td>
+<td>comma</td>
+<td>full stop</td>
+ </tr>
+</table>
+
+        <p>The two modifiers “a glide” and “nasalized vowel” come from other Unicode blocks (see <a href=http://www.unicode.org/versions/Unicode6.2.0/ch13.pdf#page=26>the Unicode Standard, Chapter 12</a> for details). They were apparently proposed to be included in Lisu, but were rejected (<a href=http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3317.pdf#page=4>2007 proposal, point five</a>).</p>
+        
+        <p>See “<a href="./lisu.html#keyboard">Keyboard for Linux</a>” for instructions on how to type Lisu using your keyboard (Linux only, not Mac or Windows).</p>
+        </section>
+
+
+
+<!-- Download install
+        ================================================== -->
+        <section id="install">
+          <div class="page-header">
+            <h1>Download & install</h1>
+          </div>
+
+          <p>Download the font file from the <a href=https://github.com/phjamr/LisuUnicode/blob/master/LisuUnicode-Regular.ttf>github page</a>. Click ‘view raw’ and save the file to a location of your choice.</p>
+          <p>The install procedure varies according to your system. Most modern operating systems have an “install” button on the window that appears when you open the font. Click the install button.</p>
+          <p>In Windows XP you need to copy the file into the C:\Windows\Fonts directory.</p>
+          <p>(If you need more help with the font installation, there are a number of websites which give instructions. See for example <a href=http://www.adobe.com/products/type/install-instructions.html>Adobe’s page</a> on installing fonts in Windows and Mac.</p>
+          <p>After installing, check that it’s working by restarting your browser and going to <a href=http://www.alanwood.net/unicode/lisu.html>Alan Wood’s test page</a>. This is also a helpful reference resource. If all of the characters display, the font has probably installed correctly.</li>
+         <p>As Alan Wood suggests, it can be helpful to compare the characters which appear on the test page with the <a href=http://www.unicode.org/charts/PDF/UA4D0.pdf#page=2>Official Unicode chart (pdf)</a>.</p>
+        </section>
+
+
+
+        <!-- Keyboard
+        ================================================== -->
+        <section id="keyboard">
+          <div class="page-header">
+            <h1>Keyboard for Linux</h1>
+          </div>
+          <p>I have developed a Lisu keyboard layout for Linux systems. I do not intend to create keyboard layouts for Mac or Windows, but I would encourage others to build on my work to do so.</p>
+          <p>If you do not use Linux but you need to use the keyboard layout, remember that there are various options for installing a Linux operating system alongside your current one (for example, see <a href=http://www.ubuntu.com/download/desktop/windows-installer>Ubuntu Windows installer</a> and <a href=https://help.ubuntu.com/community/WindowsDualBoot)>Ubuntu dual boot</a>). </p>
+          <p>The Lisu layout corresponds to the visual Latin equivalent on the <span class="miao-smcp">qwerty</span> keyboard.</p>
+          <p>Please <a href="./lisu.html#contact">contact me (or file an issue on Github)</a> if you have a suggestion for how to improve the keyboard layout.</p>
+          <p>It has been tested to work on <a href="http://www.ubuntu.com/">Ubuntu</a>, and the “easy method” installation instructions are specifically for Ubuntu.</p>
+          <p>The keyboard should work properly on other distributions (e.g. <a href="http://www.linuxmint.com/">Linux Mint</a>, <a href="http://fedoraproject.org/">Fedora</a>, and the <a href="http://www.ubuntu.com/about/about-ubuntu/derivatives">Ubuntu derivatives</a>), but the files may need to be placed in different locations.</p>
+            <h2>Easy installation method</h2>
+          <p>Save these two files in your “Downloads” folder:
+          <br><span class="muted em">right-click and choose “save link as”</span></p>
+          <ul>
+            <li><a href="https://raw.github.com/phjamr/LisuUnicode/master/kb/lisu">lisu</a></li>
+            <li><a href="https://raw.github.com/phjamr/LisuUnicode/master/kb/evdev.xml">evdev.xml</a></li>
+          </ul>
+          <p>Open a terminal. You can do this by holding down ‘ctrl’ and ‘alt’ and pressing ‘t’.</p>
+          <p>In the terminal, copy and paste this line.
+          <br><span class="muted em">Note that in the terminal you have to add ‘shift’ in order to paste: ctrl + shift + v. You can also use the menu to select Edit > Paste.</span></p>
+          <pre>sudo cp ~/Downloads/lisu /usr/share/X11/xkb/symbols/lisu</pre>
+          <p>The terminal will now ask for your password. Type it and press enter.
+          <br><span class="muted em">Note that the terminal does not display dots or stars while you type your password, so it might look like it’s not working. Don’t worry, it is working.</span></p>
+          <p>When you have typed the password it will now go onto a new line. That means it has successfully copied the file from your Downloads folder to the place where the computer can use it.</p>
+          <p>You now need to do the same for the second file. Copy this line into the terminal:</p>
+          <pre>sudo cp ~/Downloads/evdev.xml /usr/share/X11/xkb/rules/evdev.xml</pre>
+          <p>This time it should not ask for your password because you just typed it a minute ago.</p>
+          <p>You must now restart your computer before the keyboard can be used.</p>
+          <p>When you have restarted, go the “Keyboard Layout” menu. You can find it in the system settings, or on the top panel under the keyboard icon.</p>
+          <p>Click the ‘+’ button. <br><span class="muted em">If you have four keyboard layouts already then this button will be inactive and you will need to remove one keyboard before you can add another.</span></p>
+          <p>You can find the Lisu keyboard either by simply typing ‘Lisu’, or by typing ‘China’, ‘India’, ‘Myanmar’ or ‘Thailand’ as these are the countries where Lisu is used.</p>
+          <p>Click ‘add’. Your keyboard is now ready to use!</p>
+            <h2>The layout</h2>
+          <p>The keyboard layout is as follows:</p>
+         
+          <p><img src="./assets/img/lisu.svg" 
+              alt="Lisu keyboard layout" title="Lisu keyboard layout" style="width:100%;"></p>
+
+          <p>Each key has four possible options:</p>
+          <ol>
+             <li><span class="strong">Normal:</span> bottom left hand corner, black</li>
+             <li><span class="strong">Shift:</span> top left hand corner, grey</li>
+             <li><span class="strong">Alt (right):</span> bottom right hand corner, blue</li>
+             <li><span class="strong">Alt (right) and shift:</span> top right hand corner, light blue</li>
+          </ol>
+          <p>The rotated version of the letter is typed using the shift key. If there is no rotated version, the shift key will do nothing.</p>
+          <p>The Latin <span class="miao-smcp">qwerty</span> keyboard can be accessed using the alt (right) key.</p>
+          <p>Some of the tone markers, like <span class="miao-small">ꓼ</span> look identical to Latin and/or common punctuation marks, but Unicode encodes them separately and so does the keyboard layout. This is important for sorting Lisu words correctly, and making sure to include the tone mark as part of the word (punctuation is not part of the word). On the keyboard layout, the Lisu variant always uses the normal or shift key (in black, on the left), and the punctuation variant uses the alt (right) key (in blue, on the right).</p>
+
+
+          <h2>Advanced information</h2>
+          <p>Further details about keyboard layouts in Linux can be found at <a href=http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11>Daniel Paul O’Donnell’s blog</a> and the <a href=https://help.ubuntu.com/community/Howto%3A%20Custom%20keyboard%20layout%20definitions>Ubuntu documentation</a>. The following is a brief summary based on these resources.</p>
+          <p>If you would like to have more control over the keyboard installation, you need to copy the ‘lisu’ file into the layouts folder (in Ubuntu this is /usr/share/x11/xkb/symbols), and then edit the layout list so that the file can be recognized. In Ubuntu this file is evdev.xml, in /usr/share/x11/xkb/rules.</p>
+          <p>The body of this file is the <span class="pre">&lt;layoutList&gt;</span>. You can add the Lisu entry anywhere in this section. I added it at the end, just before the <span class="pre">&lt;/layoutList&gt;</span> end marker.</p>
+          <p>The code needs to include information about the file name, script code, and the relevant languages and countries, as shown below:</p>
+            <pre class="prettyprint linenums">
+    &lt;layout&gt;
+      &lt;configItem&gt;
+        &lt;name&gt;lisu&lt;/name&gt;
+        &lt;shortDescription&gt;lisu&lt;/shortDescription&gt;
+        &lt;description&gt;Lisu&lt;/description&gt;
+        &lt;countryList&gt;
+          &lt;iso3166Id&gt;CN&lt;/iso3166Id&gt;
+          &lt;iso3166Id&gt;IN&lt;/iso3166Id&gt;
+          &lt;iso3166Id&gt;MM&lt;/iso3166Id&gt;
+          &lt;iso3166Id&gt;TH&lt;/iso3166Id&gt;
+        &lt;/countryList&gt;
+        &lt;languageList&gt;
+          &lt;iso639Id&gt;lis&lt;/iso639Id&gt;
+          &lt;iso639Id&gt;lpo&lt;/iso639Id&gt;
+        &lt;/languageList&gt;
+      &lt;/configItem&gt;
+    &lt;/layout&gt;</pre>
+          <p>The iso3166 country codes can be found on <a href="https://en.wikipedia.org/wiki/ISO_3166-1">Wikipedia</a>, and the iso639 language codes at <a href="http://www.ethnologue.com/">Ethnologue</a>.</p>
+          <p>If you would like to customize the keyboard in some way, the xkb system makes this very easy.</p>
+          <p>Here is an example of one line from the keyboard layout:</p>
+            <pre class="prettyprint linenums">
+key &lt;AE04&gt; { [      4,     dollar,   onequarter,   yen ]  };</pre>
+          <p>This shows the four characters availabed under the key <AE04> (the number 4): the first one shows normal, the second +shift, the third +alt (right), and the fourth +alt+shift.</p>
+          <p>If you wanted, for example, to have the Indian Rupee sign ₹ instead of the Yuan/Yen sign ¥, you could replace “yen” with U20B9.</p>
+          <p>There do not seem to be any conventions regarding licensing for keyboard layouts as they are usually packaged with other software. For the sake of clarity, this keyboard layout is licensed under the <a href="http://opensource.org/licenses/mit-license.php">MIT License</a> so that it can be easily modified and distributed.</p>
+        </section>
+
+
+
+
+        <!-- Known issues
+        ================================================== -->
+        <section id="known-issues">
+          <div class="page-header">
+            <h1>Known issues</h1>
+          </div>
+          <p>While Lisu Unicode is fully functional for use, it is still in a phase of testing and development.
+          <p>(You do not need to worry about future versions breaking compatibility, however. Documents created using this font will always display correctly with future versions of the font as well, as indeed they should display correctly with any font based on the Unicode implementation instructions.)</p>
+          <p>These are some of the issues which I am aware of:</p>
+          <ul>
+            <li>The spacing needs to be fine-tuned, and kerning needs to be added.</li>
+            <li>It is built on a compiled version of Adobe Source Sans Pro, rather than on its source. This does not appear to have any adverse effects (most information, including hinting instructions, is accurately retained), but it is clearly not ideal.</li>
+            <li>For some reason the OpenType style set names are interfering with the copyright field in the font, so that the copyright often displays as “straight l” or “slashed zero” instead of the intended message about the OFL license etc. I have not been able to ascertain why this is happening.</li>
+          </ul>
+          <p>If you are able to offer advice or assistance with any of the above, please <a href="./lisu.html#contact">get in touch</a>.</p>
+        </section>
+
+
+        <!-- Road map
+        ================================================== -->
+        <section id="road-map">
+          <div class="page-header">
+            <h1>Roap map</h1>
+          </div>
+          <p>Of the points mentioned under “<a href=./lisu.html#known-issues>Known Issues</a>”, I will hopefully be able to tackle the following in the coming months:</p>
+<ul>
+            <li>Adjust spacing and kerning.</li>
+          </ul>
+
+          <p>There are a few additional features which may be possible to develop in the more distant future:</p>
+          <ul>
+            <li>Make a bold version?</li>
+          </ul>
+          <p>Again, I would be <a href="./lisu.html#contact">happy to hear from you</a> if you are interested in collaborating.</p>
+        </section>
+
+
+        <!-- Contact
+        ================================================== -->
+        <section id="contact">
+          <div class="page-header">
+            <h1>Contact</h1>
+          </div>
+          <p>If you come across a problem, or have a question or suggestion, please <a href=https://github.com/phjamr/LisuUnicode/issues>file it on Github</a>.</p>
+          <p>If you would like to let me know how you’re using the font, or discuss contributing to the project, you can reach me at <strong>phjamr@gmail.com</strong>.</p>
+        </section>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Updated 31 May 2013.</p>
+        <p>By Philip Reimer, built with <a href=http://twitter.github.io/bootstrap/>Twitter Bootstrap</a> (<a href=http://www.apache.org/licenses/LICENSE-2.0>Apache 2.0 license</a>).</p>
+        <p>Lisu Unicode font licensed under the <a href=http://scripts.sil.org/OFL>SIL OFL</a>; documentation under <a href=http://creativecommons.org/licenses/by-sa/3.0/>CC-BY-SA</a>.</p>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+
+  <!-- add checkboxes for Graphite features -->
+    <script type="text/javascript">
+     $(window).load(function(){
+
+        $("#feat-table").hide();
+        $("#feat-table-show").show();
+ 
+    $('#feat-table-show').click(function(){
+    $("#feat-table").slideToggle();
+    });
+
+      $("#none").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-smcp miao-onum miao-chux miao-salt miao-aspr miao-malf miao-lalf")
+      });
+    
+      $("#smcp").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-onum miao-chux miao-salt miao-aspr miao-malf miao-lalf")
+                      .addClass("miao-smcp");
+      });
+
+      $("#c2sc").click(function(){
+       $("#interact") .removeClass("miao-smcp miao-onum miao-chux miao-salt miao-aspr miao-malf miao-lalf")
+                      .addClass("miao-c2sc");
+      });
+
+      $("#onum").click(function(){
+       $("#interact") .removeClass("miao-smcp miao-c2sc miao-chux miao-salt miao-aspr miao-malf miao-lalf")
+                      .addClass("miao-onum");
+      });
+
+      $("#lalf").click(function(){
+       $("#interact") .removeClass("miao-c2sc miao-smcp miao-onum miao-chux miao-salt miao-aspr miao-malf")
+                      .addClass("miao-lalf");
+      });
+
+     });
+    </script>
+
+<script type="text/javascript">
+var sc_project=8942207; 
+var sc_invisible=1; 
+var sc_security="843f928c"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="http://c.statcounter.com/8942207/0/843f928c/1/"
+alt="web analytics"></a></div></noscript>
+
+  </body>
+</html>

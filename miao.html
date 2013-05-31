@@ -93,6 +93,9 @@
                 <a href="./miao.html">Miao (Pollard)</a>
               </li>
               <li class="">
+                <a href="./lisu.html">Lisu (Fraser)</a>
+              </li>
+              <li class="">
                 <a href="./mro.html">Mro</a>
               </li>
             </ul>
@@ -156,7 +159,7 @@
           <div class="page-header">
             <h1>Introduction</h1>
           </div>
-          <p>Miao Unicode is an open-source, Graphite enabled font which supports the ‘Miao’, or ‘Pollard’ script.</p>
+          <p>Miao Unicode is an open-source, Graphite enabled font which supports the Miao, or ‘Pollard’, script.</p>
           <p>Miao was officially added to Unicode in January 2012. The Miao Unicode font makes use of this standardized encoding.</p>
           <p>The font aims to be fully functional for all the varieties of the script in current use. (Fonts made before Miao was included in the Unicode Standard, like the <a href=http://www.archives.ecs.soton.ac.uk/miao/WritingMiao/WritingMiao.htm#font>Ahmao</a> font, were specialized for only one of the several user communities.)</p>
           <p>The design is based on Adobe’s <a href=http://sourceforge.net/projects/sourcesans.adobe/>Source Sans Pro</a>.</p>
@@ -925,7 +928,7 @@
           <h2>Advanced information</h2>
           <p>Further details about keyboard layouts in Linux can be found at <a href=http://people.uleth.ca/~daniel.odonnell/Blog/custom-keyboard-in-linuxx11>Daniel Paul O’Donnell’s blog</a> and the <a href=https://help.ubuntu.com/community/Howto%3A%20Custom%20keyboard%20layout%20definitions>Ubuntu documentation</a>. The following is a brief summary based on these resources.</p>
           <p>If you would like to have more control over the keyboard installation, you need to copy the ‘miao’ file into the layouts folder (in Ubuntu this is /usr/share/x11/xkb/symbols), and then edit the layout list so that the file can be recognized. In Ubuntu this file is evdev.xml, in /usr/share/x11/xkb/rules.</p>
-          <p>The body of this file is the <span class="pre"><layoutList></span>. You can add the Miao entry anywhere in this section. I added it at the end, just before the <span class="pre"></layoutList></span> end marker.</p>
+          <p>The body of this file is the <span class="pre">&lt;layoutList&gt;</span>. You can add the Miao entry anywhere in this section. I added it at the end, just before the <span class="pre">&lt;/layoutList&gt;</span> end marker.</p>
           <p>The code needs to include information about the file name, script code, and the relevant languages and countries, as shown below:</p>
             <pre class="prettyprint linenums">
     &lt;layout&gt;
@@ -998,7 +1001,7 @@ key &lt;AE04&gt; { [        4,      dollar,  0x1016F95,  0x1016F9C ] };</pre>
           <sample class="miao miao-salt">𖼳 𖼴</sample>
             </div>
 
-            <p>The <strong>aspiration marker</strong> is usually placed at the top right of the letter, as in <span class=miao-small>𖼎𖽐𖽑𖽦𖾑</span>. In the <a href="">Parsons brothers’ research</a>, there is an exception to this rule: letters based on ‘ma’ <span class=miao-small>𖼄</span> and ‘na’ <span class=miao-small>𖼐</span> (that is, nasal consonants) have the aspiration marker on the left. This pattern has been adopted in the Miao Unicode font. If you would like to disable this, however, you can do this using the feature “aspr” (aspiration always on the right).</p>
+            <p>The <strong>aspiration marker</strong> is usually placed at the top right of the letter, as in <span class=miao-small>𖼎𖽐𖽑𖽦𖾑</span>. In the <a href="http://www.archives.ecs.soton.ac.uk/miao/">Parsons brothers’ Ahmao archive</a>, there is an exception to this rule: letters based on ‘ma’ <span class=miao-small>𖼄</span> and ‘na’ <span class=miao-small>𖼐</span> (that is, nasal consonants) have the aspiration marker on the left. This pattern has been adopted in the Miao Unicode font. If you would like to disable this, however, you can do this using the feature “aspr” (aspiration always on the right).</p>
           <div class="row-fluid">
             <div class="span6">
               <p><strong>Aspiration marker left on nasals:</strong></p>
@@ -1039,37 +1042,9 @@ key &lt;AE04&gt; { [        4,      dollar,  0x1016F95,  0x1016F9C ] };</pre>
         ================================================== -->
         <section id="lisu-script">
           <div class="page-header">
-            <h1>The Lisu (Fraser) script</h1>
+            <h1>The Lisu (Fraser) script in Miao Unicode</h1>
           </div>
-          <p>The Lisu script was invented around 1915 by a <a href="http://en.wikipedia.org/wiki/Karen_people">Karen</a> man from Burma called Sara Ba Thaw, who was working as a <a href="http://images.library.yale.edu/divinitycontent/dayrep/Burma%20Baptist%20Missionary%20Convention%201928-1929%20v64.pdf#page=22">Christian evangelist</a> among the <a href="http://en.wikipedia.org/wiki/Lisu_people">Lisu people</a> in Yunnan province, China. Scottish missionary James Fraser subsequently modified the script in the 1930s.</p>
-          <p>Their design used Latin capital letters, and rotated versions of them when variations were required (for example <span class="miao-small">ꓣ</span> and <span class="miao-small">ꓤ</span>). There are also eight symbols based on Latin punctuation marks which represent tones.</p>
-          <p>The Lisu (Fraser) script was recognized as an official script for the Lisu language by the Chinese government in 1992. The Unicode Standard officially encoded Lisu in version 5.2.0, October 2009.</p>
-          <p>In addition to “Lisu” and “Fraser”, the script is sometimes also referred to as “Old Lisu”. This is the same script, not an older version.</p>
-          <p>The Lisu script is used primarily by speakers of the <a href="http://en.wikipedia.org/wiki/Lisu_language">Lisu language</a> – according to the <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3317.pdf">Unicode proposal</a> about 200,000 people are active users of the script, out of a total 630,000 Lisu speakers. (In addition to Yunnan province, Lisu is also spoken in Arunachal Pradesh (NE India), Myanmar, and Thailand.) It appears that the <a href="http://en.wikipedia.org/wiki/Lipo_language">Lipo language</a> was at some point written using the Lisu script, but is not any longer.</p>
-
-          <p><em>This information is condensed from the following sources:</em></p>
-<ul>
-            <li><a href=http://www.unicode.org/versions/Unicode6.2.0/ch13.pdf#page=26>Official Unicode description (pdf)</a>: brief write-up and discussion of how to implement the Unicode encoding (bottom of p.461)</li>
-            <li><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3317.pdf">Unicode proposal (2007)</a>: description of the script with rationale for Unicode encoding method, history and use, and extended text samples
-            <li><a href=http://scriptsource.org/scr/Lisu>Script Source</a>: description of history and use, with text samples</li>
-            <li><a href=http://www.omniglot.com/writing/fraser.htm>Omniglot</a>: description of history and use, with text samples; includes IPA</li>
-            <li><a href=http://en.wikipedia.org/wiki/Fraser_alphabet>Wikipedia</a>: description of history and use, with text samples</li>
-          </ul>
-
-          <h2>Lisu in the Miao Unicode font</h2>
-          <p>It made sense to include Lisu in the Miao Unicode font because Miao and Lisu are often associated, and they are used in the same region. However, seeing as there are already Unicode fonts for Lisu (e.g. <a href="https://code.google.com/p/noto/wiki/NotoSansLisu">Noto</a> and <a href="http://www.alanwood.net/unicode/fonts-east-asian.html#lisu">Lisu Tzimu</a>) I have not developed the Lisu script support in Miao Unicode to the same degree. If there is interest from the native user community, I can bring the quality up to a higher standard, and potentially develop a Linux keyboard layout analogous to that for <a href="./miao.html#keyboard">Miao</a>.</p>
-
-          <h2>Text samples</h2>
-          <div class="row-fluid">
-            <div class="span6">
-              <strong><p>Miao Unicode rendering</strong></p>
-              <p>Coming soon.</p>
-            </div>
-            <div class="span6">
-              <strong><p>Original image</strong></p>
-              <p>Coming soon.</p>
-            </div>
-          </ul>
+          <p>Like Miao, the Lisu script is used primarily in the Yunnan province of China. It made sense to include Lisu in the Miao Unicode font as the two scripts are often associated. Further information on the Lisu script can be found on the <a href="./lisu.html">Lisu page</a>, which also links to the independent “Lisu Unicode” font. The Lisu support in Miao Unicode is identical, however; the only difference between the two fonts is that Lisu Unicode lacks Miao. (Miao adds considerably to the file size; Lisu does not.)</p>
         </section>
 
 
@@ -1137,7 +1112,7 @@ key &lt;AE04&gt; { [        4,      dollar,  0x1016F95,  0x1016F9C ] };</pre>
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p>Updated 29 May 2013.</p>
+        <p>Updated 31 May 2013.</p>
         <p>By Philip Reimer, built with <a href=http://twitter.github.io/bootstrap/>Twitter Bootstrap</a> (<a href=http://www.apache.org/licenses/LICENSE-2.0>Apache 2.0 license</a>).</p>
         <p>Miao Unicode font licensed under the <a href=http://scripts.sil.org/OFL>SIL OFL</a>; documentation under <a href=http://creativecommons.org/licenses/by-sa/3.0/>CC-BY-SA</a>.</p>
       </div>
